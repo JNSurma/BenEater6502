@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+                            <title>VGA Controller (VHDL) - Logic - eewiki</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/eewiki">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://www.digikey.com/eewiki">
+
+<meta id="atlassian-token" name="atlassian-token" content="6c09395a9c29648c2bf20a8cd4227135af55f039">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="LOGIC">
+<iframe src="javascript:void(0)" title="" style="width: 0px; height: 0px; border: 0px none; display: none;"></iframe><script async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/insight.js"></script><script type="text/javascript" async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/ec.js"></script><script type="text/javascript" async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/conversion_async.js"></script><script type="text/javascript" async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/js_002"></script><script type="text/javascript" async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/js"></script><script type="text/javascript" async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/conversion_async.js"></script><script type="text/javascript" async="" charset="utf-8" id="tealium-tag-7110" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/analytics.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_279" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/bc-tracking.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_304" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/ga_cookie_track.js"></script><script type="text/javascript" async="" charset="utf-8" id="48104009-2515-48a8-b4cf-b268cee17af3" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/a_004"></script><script type="text/javascript" async="" charset="utf-8" id="utag_344" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/bat.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_336" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/insight_002.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_316" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/js_003"></script><script type="text/javascript" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/a_003"></script><script type="text/javascript" async="" charset="utf-8" id="utag_303" crossorigin="anonymous" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/3d60bbfe-3fa3-45c4-9332-cc1534d3e4bd_002.js"></script><script type="text/javascript" id="www-widgetapi-script" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/www-widgetapi.js" async=""></script><script src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/iframe_api"></script><script type="text/javascript" async="" defer="defer" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/piwik.js"></script><script src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_008.js" type="text/javascript" async=""></script><script type="text/javascript">
+        var contextPath = '/eewiki';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1604809401666">
+        
+    
+        
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="1d154fbf1062ebd6ee09328826f2a751">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            
+    
+    
+            <meta name="ajs-page-title" content="VGA Controller (VHDL)">
+            <meta name="ajs-latest-published-page-title" content="VGA Controller (VHDL)">
+            <meta name="ajs-space-name" content="Logic">
+            <meta name="ajs-page-id" content="15925278">
+            <meta name="ajs-latest-page-id" content="15925278">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="Home">
+            <meta name="ajs-parent-page-id" content="2359455">
+            <meta name="ajs-space-key" content="LOGIC">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="-1">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-context-path" content="/eewiki">
+            <meta name="ajs-base-url" content="https://www.digikey.com/eewiki">
+            <meta name="ajs-version-number" content="6.13.7">
+            <meta name="ajs-build-number" content="7901">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/eewiki/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/eewiki/s/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="25728640">
+            <meta name="ajs-user-locale" content="en_US">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,confluence.view.edit.transition,confluence-inline-comments-resolved,notification.plugin.api.enabled.com.atlassian.confluence.plugins.sharepage.api.ShareContentEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.mentions.api.ConfluenceMentionEvent,frontend.editor.v4.compatibility,notification.plugin.api.enabled.com.atlassian.confluence.event.events.security.ForgotPasswordEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.tasklist.event.SendTaskEmailEvent,file-annotations,confluence.efi.onboarding.rich.space.content,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.comment.CommentCreateEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.requestaccess.events.AccessGrantedEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.PageMoveEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.follow.FollowEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.inlinecomments.events.InlineCommentReplyEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.blogpost.BlogPostCreateEvent,lucene.caching.filter,confluence.table.resizable,notification.batch,confluence-inline-comments-rich-editor,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.blogpost.BlogPostUpdateEvent,site-wide.synchrony.opt-in,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.async.PageCreatedEvent,mobile.supported.version,notification.plugin.api.enabled.com.atlassian.confluence.plugins.files.notifications.event.FileContentMentionUpdateEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.hipchat.api.events.HipChatUserMapped,quick-reload-inline-comments-flags,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.blogpost.BlogPostMovedEvent,clc.quick.create,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.PageUpdateEvent,cql.search.screen,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,pdf-preview,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.async.PageMovedEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.sharepage.api.ShareCustomEvent,previews.sharing,previews.versions,notification.plugin.api.enabled.com.atlassian.confluence.plugins.files.notifications.event.FileContentUpdateEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.attachment.AttachmentBatchUploadCompletedEvent,collaborative-audit-log,notification.plugin.api.enabled.com.atlassian.confluence.efi.emails.events.OnboardingLessUsersEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.files.notifications.event.FileContentRemoveEvent,confluence.wrap.macro,previews.conversion-service,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.comment.CommentUpdateEvent,editor.ajax.save,graphql,read.only.mode,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.async.PageEditedEvent,previews.trigger-all-file-types,notification.plugin.api.enabled.com.atlassian.confluence.plugins.inlinecomments.events.InlineCommentResolveEvent,notification.plugin.api.enabled.com.atlassian.confluence.event.events.like.LikeCreatedEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.inlinecomments.events.InlineCommentCreateEvent,attachment.extracted.text.extractor,notification.plugin.api.enabled.com.atlassian.confluence.plugins.requestaccess.events.AccessRequestedEvent,previews.sharing.pushstate,file-annotations.likes,v2.content.name.searcher,notification.plugin.api.enabled.com.atlassian.confluence.event.events.content.page.PageCreateEvent,notification.plugin.api.enabled.com.atlassian.confluence.efi.emails.events.OnboardingNoSpaceCreatedEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.sharepage.api.ShareDraftEvent,notification.plugin.api.enabled.com.atlassian.confluence.plugins.sharepage.api.ShareAttachmentEvent,confluence-inline-comments,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="6c09395a9c29648c2bf20a8cd4227135af55f039">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="dd MMM yyyy">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="https://www.digikey.com/eewiki/s/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/154/_/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://www.digikey.com/eewiki/s/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/154/_/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.digikey.com/eewiki/opensearch/osd.action" title="eewiki">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/eewiki\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-054/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022Crowd\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022FishEye / Crucible\u0022,\u0022stash\u0022:\u0022Stash\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022Reference Application\u0022,\u0022bamboo\u0022:\u0022Bamboo\u0022,\u0022generic\u0022:\u0022Generic Application\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible Project\u0022,\u0022fecru.repository\u0022:\u0022FishEye Repository\u0022,\u0022stash.project\u0022:\u0022Stash Project\u0022,\u0022generic.entity\u0022:\u0022Generic Project\u0022,\u0022confluence.space\u0022:\u0022Confluence Space\u0022,\u0022bamboo.project\u0022:\u0022Bamboo Project\u0022,\u0022jira.project\u0022:\u0022Jira Project\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022Charlies\u0022,\u0022fecru.project\u0022:\u0022Crucible Projects\u0022,\u0022fecru.repository\u0022:\u0022FishEye Repositories\u0022,\u0022stash.project\u0022:\u0022Stash Projects\u0022,\u0022generic.entity\u0022:\u0022Generic Projects\u0022,\u0022confluence.space\u0022:\u0022Confluence Spaces\u0022,\u0022bamboo.project\u0022:\u0022Bamboo Projects\u0022,\u0022jira.project\u0022:\u0022Jira Projects\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022Basic Access\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022Trusted Applications\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022CORS\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022OAuth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesEmail\u0022:null}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_003.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d3abf04354a606eccad93e908b046b29-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/9a945b30882190e9bba98ed60a4cba45/_/download/contextbatch/css/_super/batch.css?conditionalComment=lt+IE+9" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d3abf04354a606eccad93e908b046b29-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/9a945b30882190e9bba98ed60a4cba45/_/download/contextbatch/css/_super/batch.css?conditionalComment=lte+IE+9" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_002.css" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,page,atl.general,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/eewiki/s/78b09e5563ea6e1d1563d5b924b48d0e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/03166c6e1a9b4966daed594edc2aacf8/_/download/contextbatch/css/atl.confluence.plugins.pagetree-desktop,main,viewcontent,page,atl.general,atl.comments,-_super/batch.css?conditionalComment=lt+IE+9&amp;confluence.table.resizable=true&amp;highlightactions=true" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,page,atl.general,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/custom.css" media="all">
+<script type="text/javascript" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_005.js" data-wrm-key="_super" data-wrm-batch-type="context"></script>
+<script type="text/javascript" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch.js" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,page,atl.general,atl.comments,-_super" data-wrm-batch-type="context"></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="eewiki">
+            
+    <script type="text/javascript" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/digikey-webtrends.js" defer="defer"></script>
+<script type="text/javascript">(function(a,b,c,d){a='//tags.tiqcdn.com/utag/digikey/main/prod/utag.js';b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);})();
+
+var url = window.location.pathname;
+  var postTitle = $("#title-text").text().trim();
+  var spaceName = $(".space-information-container div.name a").text().trim();
+utag_data = {
+                page_content_group: 'eewiki',
+                page_type: 'EEW'
+            };
+
+            if (url == '/eewiki/about/eewiki/') {
+                utag_data['page_content_sub_group'] = 'Landing Page';
+                utag_data['page_title'] = 'eeWiki Landing Page';
+                utag_data['page_sub_type'] = 'LP';
+                utag_data['page_id'] = 'LP';
+            } else if (url.indexOf('/display') >= 0) {
+
+
+  function getLastPart(url) {
+    var parts = url.split("/");
+    return (url.lastIndexOf('/') !== url.length - 1 
+       ? parts[parts.length - 1]
+       : parts[parts.length - 2]);
+}
+                //var lastPart = getLastPart(window.location.href.toLowerCase());
+if (getLastPart(window.location.href.toLowerCase()) == "home") {
+    setTimeout(function waitPanelMainWrapper() {
+                  if ($("#title-text").length > 0) {
+                      utag_data['page_content_sub_group'] = 'Spaces';
+                      utag_data['page_title'] = $("#title-text").text().trim();
+                      utag_data['page_sub_type'] = 'SPC';
+                      utag_data['page_id'] = 'SPC';
+
+                  } else {
+                      setTimeout(waitPanelMainWrapper, 10);
+                  }
+              }, 10);
+    
+} else {
+setTimeout(function waitPanelMainWrapper() {
+                  if ($("#title-text").length > 0) {
+                      utag_data['page_content_sub_group'] = 'Posts';
+                      utag_data['page_title'] = $("#title-text").text().trim();
+                      utag_data['page_sub_type'] = 'PST';
+                      utag_data['page_id'] = 'PST';
+
+                  } else {
+                      setTimeout(waitPanelMainWrapper, 10);
+                  }
+              }, 10);
+}
+
+
+            } else if (url.indexOf('/spacedirectory') >= 0) {
+                utag_data['page_content_sub_group'] = 'Spaces';
+                utag_data['page_title'] = 'Space Directory';
+                utag_data['page_sub_type'] = 'SD';
+                utag_data['page_id'] = 'SD';
+            } else if (url.indexOf('/spaces') >= 0) {
+                utag_data['page_content_sub_group'] = 'Spaces';
+                utag_data['page_title'] = 'Space Tools - Overview';
+                utag_data['page_sub_type'] = 'STO';
+                utag_data['page_id'] = 'STO';
+            } else if (url.indexOf('/pages') >= 0) {
+                utag_data['page_content_sub_group'] = 'Spaces';
+                utag_data['page_title'] = $("#title-text").text().trim();
+                utag_data['page_sub_type'] = 'STC';
+                utag_data['page_id'] = 'STC';
+            } else {
+                utag_data['page_content_sub_group'] = 'Untagged Page';
+                utag_data['page_sub_type'] = 'UTP';
+                utag_data['page_id'] = 'UTP';
+            }
+
+            if (typeof utag != 'undefined') {
+                utag.view(utag_data);
+            }
+</script>
+
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  /* _paq.push(['rememberConsentGiven']) */
+  (function() {
+    var u="https://eng.eewiki.net/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+<meta name="google-site-verification" content="85yTzhpaQNr9MN1IqMB74sCTyZgrT5cW0hHRR-tt8l8">
+<style>
+.cookie-mask, .cookie-notice {
+    display:none;
+}
+
+.gdpr .cookie-mask {
+    display:block;
+	position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#000;
+    z-index: 9998;
+    opacity: 0.8;
+}
+
+.gdpr .cookie-notice {
+    display:block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .8);
+	z-index: 9999;
+}
+
+.gdpr .cookie-wrapper {
+	height: auto;
+	display: block;
+	width: 100%;
+	padding: 0;
+	max-width:1024px;
+	margin:0 auto;
+	box-sizing:content-box;
+}
+
+.gdpr .cookie-wrapper div + div {
+	border-top: solid 1px #ccc;
+	background-color: #eee;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	/*     display: flex; */
+}
+.gdpr .cookie-wrapper div + div a.secondary.button {
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	background: none;
+	background-color: #cc0000;
+	padding: 10px 33px 10px 32px;
+	border: none;
+	border-radius: 5px;
+	white-space: nowrap;
+	color: #fff !important;
+}
+.gdpr .cookie-wrapper div + div a.secondary.button span.button-mobile {
+	/*! display: none; */
+}
+
+@media (max-width: 500px) {
+	.gdpr .cookie-wrapper div + div a.secondary.button span.button-mobile {
+		display: inline;
+	}
+	.gdpr .cookie-wrapper div + div a.secondary.button span.button-desktop {
+		display: none;
+	}
+}
+.gdpr .cookie-wrapper .button::-moz-focus-inner {
+	padding: 0 !important;
+	border: 0 none !important;
+}
+.gdpr .cookie-wrapper .button {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 100%;
+	padding: 5px 10px;
+	color: #000;
+	font-weight: bold;
+	background-color: #ccc;
+	border: solid 1px #666;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.gdpr .cookie-wrapper .button:hover {
+	background-color: #666;
+	color: #fff;
+	border-color: #333;
+	text-decoration: none !important;
+}
+.gdpr .cookie-wrapper .button.secondary {
+	background-color: #FFC425;
+}
+.gdpr .cookie-wrapper .button.secondary:hover {
+	background-color: #403106;
+	border-color: #000;
+}
+
+.gdpr .cookie-notice {
+	color: #000;
+	position: absolute;
+  background:#fff;
+	width: 85%;
+	height: auto;
+	border-radius: 4px;
+	left:0;
+	right:0;
+	top:200px;
+	max-width:600px;
+	padding:0px;
+	margin:auto;
+}
+
+.gdpr .cookie-wrapper {
+	display: block;
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	height: auto;
+	box-sizing: content-box;
+}
+
+.gdpr .cookie-wrapper div {
+	padding:15px;
+}
+
+.gdpr .cookie-wrapper p {
+	padding: 0 25px 0 0;
+	margin: 0;
+	font-size: 13px;
+}
+.gdpr .cookie-wrapper p a {
+	text-decoration: underline;
+	color: #000;
+}
+
+.gdpr .cookie-notice .button-desktop {
+	display: none;
+}
+.gdpr .cookie-notice .button.secondary {
+	padding: 10px 32px 10px 10px;
+	white-space: nowrap;
+	font-size: 14px;
+	width: auto !important;
+}
+
+.gdpr .cookie-notice .button.secondary:hover {
+	background: none;
+	background-color: #cc0000;
+}
+
+.gdpr .cookie-notice .button + a {
+	float:right;
+	padding-top:10px;
+	color:#3366bb;
+	font-size:12px;
+}
+
+
+@media (max-width: 500px) {
+
+	.gdpr .cookie-wrapper div + div a.button {
+		float: none;
+		display: block;
+	}
+	
+	.gdpr .cookie-notice .button + a {
+		float: none;
+		display: block;
+		text-align: center;
+	}
+}
+
+</style>
+
+<script type="text/javascript" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/evergage.js"></script>
+
+
+    
+                <link rel="canonical" href="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/viewpage.html">
+        <link rel="shortlink" href="https://www.digikey.com/eewiki/x/HgDz">
+    <meta name="wikilink" content="[LOGIC:VGA Controller (VHDL)]">
+    <meta name="page-version" content="37">
+    <meta name="ajs-page-version" content="37">
+
+
+  <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="YQEZK-AGCLT-A89TW-DLE3C-K72A2",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"YQEZK-AGCLT-A89TW-DLE3C-K72A2",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="i5mt55yxykngux5hok4q-f-c41edc611-clientnsv4-s.akamaihd.net",i={"ak.v":"29","ak.cp":"942801","ak.ai":parseInt("605158",10),"ak.ol":"0","ak.cr":35,"ak.ipv":4,"ak.proto":"h2","ak.rid":"271fb043","ak.r":19853,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.bpcip":"71.89.62.0","ak.cport":58075,"ak.gh":"184.51.147.28","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1604809401","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==3IzCMOvmzGAay4zRafSFwENUznaEBPhOahLIa7HWBwKru0OPONYhU6mbUGDXZyyJgM3+19fwnNXUoDkXHRszR/y5ZS8J0J5xiY7IvTBaiaTZj8dMvD30ENveVN1rQaV/mnfdB6wW2c3estaCZQWP/FtBGTNNHUay+94PibI4Lgtjqz6XOklZfSSRD8ounjMuvwgo7wgmOxLujr52B5hewOFOiPR8/djL1ULyh0ds8ZrW26g+nUNNGgMj6FRLzHqtCwzUuqFvx7KayLADXU0KXkbX4nQjBH2bDxd2086mmheCKH3RsgqArRX919RGkMC9Yt2dum5LHAmNmyCzm3muvZvTQONWdQyFID3m2a2Jm5fXtNBcWfVGmqFx7sxJBWEW617eAvd2q68rPT0hZBHXg9LII+rXT+PPvpg7o/9q0nQ=","ak.pv":"111","ak.dpoabenc":""};if(""!==t)i["ak.ruds"]=t;var _={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!_.i){var a=BOOMR.subscribe;a("before_beacon",_.av,null,null),a("onbeacon",_.rv,null,null),_.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script><script>bazadebezolkohpepadr="921418724"</script><script type="text/javascript" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/36ebb8d8" defer="defer"></script><script type="text/javascript" charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_004.js"></script><style type="text/css" class="evergageCampaignStyles">/*
+ * Copyright (C) 2010-2014 Evergage, Inc.
+ * All rights reserved.
+ */
+
+
+/* Fluid class for determining actual width in IE */
+#qtip-rcontainer .evergage-tooltip{
+    display: block !important;
+    visibility: hidden !important;
+    position: static !important;
+    float: left !important;
+}
+
+/* Core qTip styles */
+.evergage-tooltip, .evergage-qtip{
+    position: fixed;
+    left: -28000px;
+    top: -28000px;
+    display: none;
+}
+
+.evergage-tooltip.evergageMessageInVisualEditorTestMode {
+    position: absolute;
+    pointer-events: auto;
+}
+
+.evergage-tooltip.evergage-jgrowl.evergage-tooltip-bar {
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+}
+
+.evergage-tooltip-invisible {
+    display: none !important;
+    visibility: hidden !important;
+    width: 1px !important;
+    height: 1px !important;
+}
+
+.evergage-tooltip-page {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: inherit !important;
+    display: inline-block;
+}
+
+.evergage-tooltip-page-replace {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.evergage-tooltip .evergage-tooltip-content li.evergage-tasklistitem-notdone, .evergage-tooltip .evergage-tooltip-content li.evergage-tasklistitem-done {
+    text-transform: inherit;
+    display: list-item;
+    width: inherit;
+    line-height: inherit;
+    text-align: left;
+    margin-bottom: 10px;
+    list-style-position: inside;
+}
+
+.evergage-tooltip li.evergage-task-done, .evergage-tooltip li.evergage-task-notdone {
+    margin-bottom: 10px;
+}
+
+.evergage-tooltip .evergage-tooltip-content li.evergage-tasklistitem-done, .evergage-tooltip li.evergage-task-done {
+    text-decoration: line-through;
+}
+
+.evergage-tooltip.evergage-nonBlocking.evergage-tooltip-hover {
+    opacity: 0.2 !important;
+}
+
+.evergage-tooltip .evergage-tooltip-content{
+    position: relative;
+    padding: 5px 9px;
+    overflow: hidden;
+
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.evergage-tooltip .evergage-tooltip-titlebar{
+    position: relative;
+    min-height: 14px;
+    padding: 5px 35px 5px 10px;
+    overflow: hidden;
+
+    border-width: 0 0 1px;
+    font-weight: bold;
+}
+
+.evergage-tooltip-titlebar + .evergage-tooltip-content{ border-top-width: 0 !important; }
+
+/* Default close button class */
+.evergage-tooltip-titlebar .evergage-tooltip-close {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -9px;
+    font-weight: bold;
+
+    cursor: pointer;
+    outline: medium none;
+
+    border: none;
+    background: transparent;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+}
+
+.emptyTitle > .evergage-tooltip-titlebar  {
+    height: 0;
+    float: right;
+    z-index: 2147483647;
+}
+
+* html .evergage-tooltip .evergage-tooltip-titlebar .evergage-tooltip-close { top: 16px; } /* IE fix */
+
+.evergage-tooltip-titlebar .evergage-ui-icon-close,
+.evergage-tooltip-icon .evergage-ui-icon-close {
+    display: block;
+    text-indent: -1000em;
+    direction: ltr;
+}
+
+.evergage-tooltip-icon, .evergage-tooltip-icon .evergage-ui-icon-close {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.evergage-tooltip-icon .evergage-ui-icon-close{
+    width: 18px;
+    height: 14px;
+
+    text-align: center;
+    text-indent: 0;
+    font: normal bold 14px/14px sans-serif;
+
+    color: inherit;
+    background: transparent none no-repeat -100em -100em;
+}
+
+a.evergage-tooltip-close:hover {
+    text-decoration: none;
+}
+
+.evergage-ui-icon-close:hover {
+    font-size: 22px;
+}
+
+
+/* Applied to 'focused' tooltips e.g. most recently displayed/interacted with */
+.evergage-tooltip-focus {}
+
+/* Applied on hover of tooltips i.e. added/removed on mouseenter/mouseleave respectively */
+.evergage-tooltip-hover {}
+
+/* Default tooltip style */
+.evergage-tooltip-default {
+    /*border-width: 2px;
+    border-style: solid;
+    border-color: #F1D031;
+
+    background-color: #FFFFA3;
+    color: #555;*/
+}
+
+.evergage-tooltip-default .evergage-tooltip-titlebar {
+    background-color: transparent;
+}
+
+.evergage-tooltip-default .evergage-tooltip-icon {
+    /*border-color: #CCC;*/
+    /*background: #F1F1F1;*/
+    /*color: #777;*/
+}
+
+/* Add shadows to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
+.evergage-tooltip-shadow{
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
+.evergage-tooltip-rounded,
+.evergage-tooltip-tipsy,
+.evergage-tooltip-bootstrap{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+
+/* IE9 fix - removes all filters */
+.evergage-tooltip:not(.ie9haxors) div.evergage-tooltip-content,
+.evergage-tooltip:not(.ie9haxors) div.evergage-tooltip-titlebar{
+    filter: none;
+    -ms-filter: none;
+}
+
+
+/* Tips plugin */
+.evergage-tooltip .evergage-tooltip-tip{
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.evergage-tooltip .evergage-tooltip-tip,
+.evergage-tooltip .evergage-tooltip-tip .evergage-qtip-vml{
+    position: absolute;
+
+    line-height: 0.1px !important;
+    font-size: 0.1px !important;
+    color: #123456;
+
+    background: transparent;
+    border: 0 dashed transparent;
+}
+
+.evergage-tooltip .evergage-tooltip-tip canvas{ top: 0; left: 0; }
+
+.evergage-tooltip .evergage-tooltip-tip .evergage-qtip-vml{
+    behavior: url(#default#VML);
+    display: inline-block;
+    visibility: visible;
+}
+
+/* Modal plugin */
+#evergage-qtip-overlay{
+    position: fixed;
+    left: -10000em;
+    top: -10000em;
+}
+
+/* Applied to modals with show.modal.blur set to true */
+#evergage-qtip-overlay.blurs{ cursor: pointer; }
+
+/* Change opacity of overlay here */
+#evergage-qtip-overlay div{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+
+    background-color: black;
+
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+    -ms-filter:\"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)\";
+}
+
+.evergage.poweredByEvergage > a {
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    right: 4px;
+    bottom: 2px;
+}
+
+.evergage.poweredByEvergage > a:hover {
+    opacity: 1;
+}
+
+
+//# sourceURL=evergageStyles.css*/</style><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_304" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_005.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_269" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_009.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_279" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_288" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_007.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_303" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_010.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_316" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_012.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_336" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_002.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_337" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_006.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_344" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_003.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_351" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_014.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_363" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_013.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_digikey.main_364" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_011.js"></script><link rel="stylesheet" type="text/css" href="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch.css"><script type="text/javascript" charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_003.js"></script>
+            <meta name="ajs-use-watch" content="false">
+            <meta name="ajs-attachment-source-content-id" content="15925278">
+            <meta name="ajs-use-inline-tasks" content="true">
+            <meta name="ajs-heartbeat" content="true">
+            <meta name="ajs-action-locale" content="en_US">
+            <meta name="ajs-editor-plugin-resource-prefix" content="/eewiki/s/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/6.13.7/_">
+            <meta name="ajs-edit-mode" content="collaborative">
+            <meta name="ajs-user-watching-own-content" content="false">
+            <meta name="ajs-new-page" content="false">
+            <meta name="ajs-editor-mode" content="richtext">
+            <meta name="ajs-auto-start" content="false">
+            <meta name="ajs-conf-revision" content="confluence$content$15925278.36">
+            <meta name="ajs-sync-revision-source" content="">
+            <meta name="ajs-draft-id" content="78086294">
+            <meta name="ajs-draft-share-id" content="03fee7ec-3e44-46c8-993d-397407aeae63">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-collaborative-editor-status" content="">
+            <meta name="ajs-existing-draft-id" content="0">
+            <meta name="ajs-content-id" content="15925278">
+            <meta name="ajs-form-name" content="inlinecommentform">
+            <meta name="ajs-can-attach-files" content="false">
+            <meta name="ajs-show-draft-message" content="false">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-collaborative-content" content="true">
+            <meta name="ajs-min-editor-height" content="150">
+            <meta name="ajs-version-comment" content="">
+            <meta name="ajs-draft-type" content="page">
+                
+                <meta name="ajs-synchrony-token" content="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJodHRwczpcL1wvd3d3LmRpZ2lrZXkuY29tXC9zeW5jaHJvbnlcL3YxIiwiYWNjZXNzIjp7IlwvZGF0YVwvRGlnaS1LZXktQ29ycG9yYXRpb24tNjg1NmExZDQtNWY3OS0zN2U4LTllMTktYjExYjI1NTMzZDMxXC9jb25mbHVlbmNlLTE1OTI1Mjc4LXRpdGxlIjoiIiwiXC9kYXRhXC9EaWdpLUtleS1Db3Jwb3JhdGlvbi02ODU2YTFkNC01Zjc5LTM3ZTgtOWUxOS1iMTFiMjU1MzNkMzFcL2NvbmZsdWVuY2UtMTU5MjUyNzgiOiIifSwicmV2aXNpb25NZXRhIjp7fSwic2Vzc2lvbiI6eyJhdmF0YXJVUkwiOiJcL2ltYWdlc1wvaWNvbnNcL3Byb2ZpbGVwaWNzXC9hbm9ueW1vdXMuc3ZnIiwibmFtZSI6bnVsbCwiZnVsbG5hbWUiOm51bGx9LCJpc3MiOiJEaWdpLUtleS1Db3Jwb3JhdGlvbi02ODU2YTFkNC01Zjc5LTM3ZTgtOWUxOS1iMTFiMjU1MzNkMzEiLCJleHAiOjE2MDQ4OTU4MDMsImlhdCI6MTYwNDgwOTQwM30.n7ua0NwjbAd2URL8JrdAki3xwNH0Pnmjz8-OM8lQjjs">
+    <meta name="ajs-synchrony-base-url" content="https://www.digikey.com/synchrony,https://www.digikey.com/eewiki/synchrony-proxy">
+    <meta name="ajs-synchrony-app-id" content="Digi-Key-Corporation-6856a1d4-5f79-37e8-9e19-b11b25533d31">
+    <meta name="ajs-synchrony-expiry" content="1604894903">
+    <meta name="ajs-use-xhr-fallback" content="true">
+
+            		    <meta name="ajs-max-thumb-width" content="300">
+		    <meta name="ajs-max-thumb-height" content="300">
+		    <meta name="ajs-can-send-email" content="true">
+		    <meta name="ajs-is-dev-mode" content="false">
+		    <meta name="ajs-draft-save-interval" content="30000">
+		    <meta name="ajs-show-hidden-user-macros" content="false">
+		    <meta name="ajs-can-view-profile" content="false">
+		    <meta name="ajs-is-admin" content="false">
+		    <meta name="ajs-heartbeat-interval" content="30000">
+	
+    <link rel="stylesheet" type="text/css" href="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_004.css"><script type="text/javascript" charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_002.js"></script><script async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/ktag.omcsettings"></script><script type="text/javascript" async="" charset="utf-8" id="tiqapp" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/utag_004.js"></script><script src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/a_006"></script><script src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/a"></script><link rel="stylesheet" type="text/css" href="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_005.css"><script type="text/javascript" charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/batch_006.js"></script><script src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/a_005"></script><script src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/a_002"></script><style type="text/css" media="print">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style><style type="text/css" media="print">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style><script charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/13.js"></script><script charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/1.js"></script><script charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/9.js"></script><script charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/6.js"></script><script charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/0.js"></script><script charset="utf-8" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/4.js"></script><script async="" crossorigin="anonymous" type="text/javascript" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/3d60bbfe-3fa3-45c4-9332-cc1534d3e4bd_003.js"></script></head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default synchrony-active" style="margin-top: 0px; background-position: 0px 0px;" data-aui-version="7.9.7">
+
+        
+            <div id="stp-licenseStatus-banner"></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">Skip to content</a></li>
+    <li><a href="#breadcrumbs">Skip to breadcrumbs</a></li>
+    <li><a href="#header-menu-bar">Skip to header menu</a></li>
+    <li><a href="#navigation">Skip to action menu</a></li>
+    <li><a href="#quick-search-query">Skip to quick search</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container"><ul id="messageContainer"></ul>
+    <div id="header-precursor">
+        <div class="cell">
+            <div class="cookie-mask" style="display: none;"></div>
+<div class="cookie-notice" style="display: none;">
+    <div class="cookie-wrapper">
+        <div>
+            <p>We use cookies to provide our visitors with an optimal site experience. View our <a href="https://www.digikey.com/en/help/Privacy">privacy notice</a> and <a href="https://www.digikey.com/en/help/policies/cookie-notice">cookie notice</a>
+ to learn more about how we use cookies and how to manage your settings.
+ By proceeding on our website you consent to the use of cookies.</p>
+        </div>
+        <div>
+            <a class="secondary button" href="javascript:void(0)">
+                <span class="button-desktop" track-data="ref_page_event=Consent or View Privacy">Continue</span>
+                <span class="button-mobile" track-data="ref_page_event=Consent or View Privacy">Continue</span>
+            </a>
+            <a href="https://www.digikey.com/en/help/Privacy">Privacy Notice</a>
+        </div>
+    </div>
+</div>
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner" class="fixed-header">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation" data-aui-responsive="true"><div class="aui-header-inner"><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://www.digikey.com/eewiki/"><img src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/atl.png" alt="eewiki" data-aui-responsive-header-index="0"></a></h1><ul class="aui-nav" resolved="" style="width: auto;">
+                            <li>
+            
+        
+        
+<a id="space-menu-link" class=" aui-dropdown2-trigger aui-nav-link" aria-controls="space-menu-link-content" aria-haspopup="true" role="button" title="Spaces" tabindex="0" data-aui-trigger="" resolved="" aria-expanded="false" href="#space-menu-link-content">Spaces<span class="icon aui-icon-dropdown"></span></a><div id="space-menu-link-content" class="aui-dropdown2 aui-style-default aui-dropdown2-in-header aui-layer" role="menu" aria-hidden="true" resolved=""><div role="application"></div></div>
+        </li>
+                                        <li class="aui-buttons">
+            </li>
+    </ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav" resolved="">
+                        <li>
+        <form id="quick-search" class="aui-quicksearch dont-default-focus header-quicksearch" action="/eewiki/dosearchsite.action" method="get"><fieldset><label for="quick-search-query" class="assistive">Quick Search</label><input id="quick-search-query" class="text app-search search quick-search-query" type="text" accesskey="q" autocomplete="off" name="queryString" title="Quick Search (g , gor /)" placeholder="Search"><input id="quick-search-submit" class="quick-search-submit" type="submit" value="Search"><div class="aui-dd-parent quick-nav-drop-down"></div></fieldset></form>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" title="Help" resolved="" aria-controls="help-menu-link-content" aria-expanded="false">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">Help</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default aui-layer" aria-hidden="true" resolved="">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-613/" class="    " title="Visit the Confluence documentation home" target="_blank">
+        Online Help
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="https://www.digikey.com/eewiki" class="    " title="View available keyboard shortcuts (?)">
+        Keyboard Shortcuts
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="https://www.digikey.com/eewiki/dashboard/configurerssfeed.action" class="    " title="Create your custom RSS feed.">
+        Feed Builder
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="https://confluence.atlassian.com/display/DOC/Confluence+6.13+Release+Notes" class="    " title="">
+        What’s new
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="https://www.digikey.com/eewiki" class="   user-item administration-link " title="Browse gadgets provided by Confluence">
+        Available Gadgets
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="https://www.digikey.com/eewiki/aboutconfluencepage.action" class="    " title="Get more information about Confluence">
+        About Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            </li><li>
+        
+            
+<a id="login-link" href="https://www.digikey.com/eewiki/login.action?os_destination=%2Fpages%2Fviewpage.action%3FpageId%3D15925278" class="   user-item login-link " title="">
+        Log in
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar" style="width: 285px; visibility: visible; top: 40px; left: 0px;">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="Edit space details"><div class="avatar"><div class="space-logo" data-key="LOGIC" data-name="Logic" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="https://www.digikey.com/eewiki/display/LOGIC/Home?src=sidebar" title="Logic"><img class="avatar-img" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/global.png" alt="Logic"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="https://www.digikey.com/eewiki/display/LOGIC/Home?src=sidebar" title="Logic">Logic</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="pages"><div class="acs-nav-sections"><div class="main-links-section "><ul class="acs-nav-list"><li class="acs-nav-item wiki current-item" data-collector-key="spacebar-pages"><a class="acs-nav-item-link tipsy-enabled" href="https://www.digikey.com/eewiki/collector/pages.action?key=LOGIC&amp;src=sidebar-pages" data-collapsed-tooltip="Pages"><span class="icon"></span><span class="acs-nav-item-label">Pages</span></a></li><li class="acs-nav-item blog" data-collector-key="spacebar-blogs"><a class="acs-nav-item-link tipsy-enabled" href="https://www.digikey.com/eewiki/pages/viewrecentblogposts.action?key=LOGIC&amp;src=sidebar-blogs" data-collapsed-tooltip="Blog"><span class="icon"></span><span class="acs-nav-item-label">Blog</span></a></li></ul></div><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="pages" data-collapsed-tooltip="Child pages"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title pages"><span class="label">Child pages</span></h5></div><div class="ia-secondary-parent-content"><ul class="parent ia-secondary-header-title wiki"><li class="parent-item"><a class="parent-item-link" href="https://www.digikey.com/eewiki/display/LOGIC/Home?src=contextnavchildmode" title="Home"><span class="icon"></span><span class="label">Home</span></a></li></ul></div><div class="ia-secondary-current-content"><ul class="ia-secondary-currentPage-title wiki current-item"><li><span class="icon"></span><span class="label">VGA Controller (VHDL)</span></li></ul></div><div class="ia-secondary-content"><div class="contextual-nav-child-pages"></div></div></div></div><div class="hidden"><a href="https://www.digikey.com/eewiki/collector/pages.action?key=LOGIC&amp;src=sidebar" id="space-pages-link" title=" (g , s)"></a><script type="text/x-template" title="logo-config-content"><h2>Space Details</h2><div class="personal-space-logo-hint">Your profile picture is used as the logo for your personal space. <a href="/eewiki/users/profile/editmyprofilepicture.action" target="_blank">Change your profile picture</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="Browse pages" data-class="" data-href="/eewiki/pages/reorderpages.action?key=LOGIC">Browse pages</div></div><button id="space-tools-menu-trigger" class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger="" resolved="" aria-expanded="false" data-collapsed-tooltip="Space tools"><span class="aui-icon aui-icon-small aui-iconfont-configure">Configure</span><span class="aui-button-label">Space tools</span><span class="icon aui-icon-dropdown"></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown aui-layer" role="menu" aria-hidden="true" data-aui-alignment="top left" resolved=""><div role="presentation" class="aui-dropdown2-section space-tools-navigation"><div role="group"><ul class="aui-list-truncate" role="presentation"><li role="presentation"><a role="menuitem" tabindex="-1" class="" href="https://www.digikey.com/eewiki/spaces/viewspacesummary.action?key=LOGIC&amp;src=spacetools">Overview</a></li><li role="presentation"><a role="menuitem" tabindex="-1" class="" href="https://www.digikey.com/eewiki/pages/reorderpages.action?key=LOGIC&amp;src=spacetools">Content Tools</a></li></ul></div></div><div role="presentation" class="aui-dropdown2-section space-operations"><div role="group"><ul class="aui-list-truncate" role="presentation"><li role="presentation"><a role="menuitem" tabindex="-1" class="" href="https://www.digikey.com/eewiki/pages/reorderpages.action?key=LOGIC&amp;src=spacetools">Browse pages</a></li></ul></div></div></div><a class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left" data-tooltip="Collapse sidebar ( [ )"></a></div>
+                    
+                        			<div class="ia-splitter-handle tipsy-enabled" data-tooltip="Collapse sidebar ( [ )" original-title=" ([)"><div class="ia-splitter-handle-highlight confluence-icon-grab-handle"></div></div></div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel" style="margin-left: 285px; margin-top: 40px;">
+                        <div id="main-header-placeholder" style="margin: -10px 0px 20px; padding: 0px; height: 70px;"><h1 class="with-breadcrumbs" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 28px; font-style: normal; font-weight: 500; text-decoration: rgb(23, 43, 77); letter-spacing: -0.28px; text-align: start; padding: 35px 0px 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
+                                                <a href="https://www.digikey.com/eewiki/pages/viewpage.action?pageId=15925278" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 28px; font-style: normal; font-weight: 500; margin: 0px; padding: 0px; color: rgb(23, 43, 77); text-decoration: rgb(23, 43, 77); letter-spacing: -0.28px; text-align: start;">VGA Controller (VHDL)</a>
+                                    </h1></div><div id="main-header" style="position: fixed; width: 1538px; right: 0px; top: -11px; margin-top: 0px; padding: 10px 40px; z-index: 0;" class="overlay-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" data-container="#navigation" resolved="" aria-controls="action-menu" aria-expanded="false">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default aui-layer most-right-menu-item" aria-hidden="true" resolved="">
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-primary" class="section-primary first">
+                                                    <li>
+
+    
+        
+                                            
+    
+    
+    <a id="view-attachments-link" href="https://www.digikey.com/eewiki/pages/viewpageattachments.action?pageId=15925278" rel="nofollow" class="action-view-attachments" accesskey="t" title="View Attachments (t)">
+                <span>
+                        A<u>t</u>tachments (8)
+        </span>    </a>
+</li>
+                                                <li>
+
+    
+        
+                                            
+    
+    
+    <a id="action-view-history-link" href="https://www.digikey.com/eewiki/pages/viewpreviousversions.action?pageId=15925278" rel="nofollow" class="action-view-history" title="">
+                <span>
+                        Page History
+        </span>    </a>
+</li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-secondary" class="section-secondary">
+                                                    <li>
+
+    
+        
+                                            
+    
+    
+    <a id="view-page-info-link" href="https://www.digikey.com/eewiki/pages/viewinfo.action?pageId=15925278" rel="nofollow" class="action-view-info" title="">
+                <span>
+                        Page Information
+        </span>    </a>
+</li>
+                                                <li>
+
+    
+        
+                                            
+    
+    
+    <a id="view-resolved-comments" href="https://www.digikey.com/eewiki" rel="nofollow" class="" title="">
+                <span>Resolved comments (0)</span>    </a>
+</li>
+                                                <li>
+
+    
+        
+                                            
+    
+    
+    <a id="view-in-hierarchy-link" href="https://www.digikey.com/eewiki/pages/reorderpages.action?key=LOGIC&amp;openId=15925278#selectedPageInHierarchy" rel="nofollow" class="" title="">
+                <span>
+                        View in Hierarchy
+        </span>    </a>
+</li>
+                                                <li>
+
+    
+        
+                                            
+    
+    
+    <a id="action-view-source-link" href="https://www.digikey.com/eewiki/plugins/viewsource/viewpagesrc.action?pageId=15925278" rel="nofollow" class="action-view-source popup-link" title="">
+                <span>
+                        View Source
+        </span>    </a>
+</li>
+                                                <li>
+
+    
+        
+                                            
+    
+    
+    <a id="action-export-pdf-link" href="https://www.digikey.com/eewiki/spaces/flyingpdf/pdfpageexport.action?pageId=15925278" rel="nofollow" class="" title="">
+                <span>
+                        Export to PDF
+        </span>    </a>
+</li>
+                                                <li>
+
+    
+        
+                                            
+    
+    
+    <a id="action-export-word-link" href="https://www.digikey.com/eewiki/exportword?pageId=15925278" rel="nofollow" class="action-export-word" title="">
+                <span>
+                        Export to Word
+        </span>    </a>
+</li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="https://www.digikey.com/eewiki/collector/pages.action?key=LOGIC&amp;src=breadcrumbs-collector">Dashboard</a></span>
+                                                                                    
+                        
+        </li><li>
+                        
+                            <span class=""><a href="https://www.digikey.com/eewiki/display/LOGIC/Home?src=breadcrumbs-parent">Home</a></span>
+                                                                    </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">Skip to end of banner</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="Unrestricted" id="content-metadata-page-restrictions-hidden" class="hidden"></a><a href="https://www.digikey.com/eewiki/pages/viewpageattachments.action?pageId=15925278&amp;metadataLink=true" title="8 attachments" id="content-metadata-attachments" class="aui-icon aui-icon-small aui-iconfont-attachment"></a></li><li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>Jira links</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">Go to start of banner</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs" style="display: none;">
+                                                <a href="https://www.digikey.com/eewiki/pages/viewpage.action?pageId=15925278">VGA Controller (VHDL)</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/eewiki/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            Created by <span class="author">     <a href="https://www.digikey.com/eewiki/display/~scott.larson@digikey.com" class="url fn">Scott Larson</a></span>, last modified on <a class="last-modified" title="Show changes" href="https://www.digikey.com/eewiki/pages/diffpagesbyversion.action?pageId=15925278&amp;selectedPageVersions=36&amp;selectedPageVersions=37">Mar 07, 2018</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <p>&nbsp;</p><p></p><div class="toc-macro client-side-toc-macro  conf-macro output-block hidden-outline" data-cssliststyle="disc" data-csslistindent="20px" data-headerelements="H1,H2,H3,H4,H5,H6,H7" data-hasbody="false" data-macro-name="toc"><ul style=" list-style: disc; padding-left: 20px;"><li><span class="toc-item-body" data-outline="1"><span class="toc-outline">1</span><a href="#VGAController(VHDL)-CodeDownloads" class="toc-link">Code Downloads</a></span><ul style=" list-style: disc; padding-left: 20px;"><li><span class="toc-item-body" data-outline="1.1"><span class="toc-outline">1.1</span><a href="#VGAController(VHDL)-VGAController" class="toc-link">VGA Controller</a></span></li><li><span class="toc-item-body" data-outline="1.2"><span class="toc-outline">1.2</span><a href="#VGAController(VHDL)-SupportingExampleMaterial" class="toc-link">Supporting Example Material</a></span></li></ul></li><li><span class="toc-item-body" data-outline="2"><span class="toc-outline">2</span><a href="#VGAController(VHDL)-Features" class="toc-link">Features</a></span></li><li><span class="toc-item-body" data-outline="3"><span class="toc-outline">3</span><a href="#VGAController(VHDL)-Introduction" class="toc-link">Introduction</a></span></li><li><span class="toc-item-body" data-outline="4"><span class="toc-outline">4</span><a href="#VGAController(VHDL)-Background" class="toc-link">Background</a></span></li><li><span class="toc-item-body" data-outline="5"><span class="toc-outline">5</span><a href="#VGAController(VHDL)-Connections" class="toc-link">Connections</a></span></li><li><span class="toc-item-body" data-outline="6"><span class="toc-outline">6</span><a href="#VGAController(VHDL)-SignalTiming" class="toc-link">Signal Timing</a></span><ul style=" list-style: disc; padding-left: 20px;"><li><span class="toc-item-body" data-outline="6.1"><span class="toc-outline">6.1</span><a href="#VGAController(VHDL)-PixelClock" class="toc-link">Pixel Clock</a></span></li><li><span class="toc-item-body" data-outline="6.2"><span class="toc-outline">6.2</span><a href="#VGAController(VHDL)-TheoryofOperation" class="toc-link">Theory of Operation</a></span></li></ul></li><li><span class="toc-item-body" data-outline="7"><span class="toc-outline">7</span><a href="#VGAController(VHDL)-PortDescriptions" class="toc-link">Port Descriptions</a></span></li><li><span class="toc-item-body" data-outline="8"><span class="toc-outline">8</span><a href="#VGAController(VHDL)-UsingtheVGAController" class="toc-link">Using the VGA Controller</a></span></li><li><span class="toc-item-body" data-outline="9"><span class="toc-outline">9</span><a href="#VGAController(VHDL)-Reset" class="toc-link">Reset</a></span></li><li><span class="toc-item-body" data-outline="10"><span class="toc-outline">10</span><a href="#VGAController(VHDL)-Conclusion" class="toc-link">Conclusion</a></span></li><li><span class="toc-item-body" data-outline="11"><span class="toc-outline">11</span><a href="#VGAController(VHDL)-Appendix:VGATimingSpecifications" class="toc-link">Appendix:&nbsp; VGA Timing Specifications</a></span></li><li><span class="toc-item-body" data-outline="12"><span class="toc-outline">12</span><a href="#VGAController(VHDL)-Contact" class="toc-link">Contact</a></span></li></ul></div><p></p><h1 id="VGAController(VHDL)-CodeDownloads">Code Downloads</h1><h3 id="VGAController(VHDL)-VGAController">VGA Controller</h3><p>VGA Controller VHDL:&nbsp; <strong><a href="https://www.digikey.com/eewiki/download/attachments/15925278/vga_controller.vhd?version=2&amp;modificationDate=1520459467550&amp;api=v2" data-linked-resource-id="16056326" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="vga_controller.vhd" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="15925278" data-linked-resource-container-version="37">vga_controller.vhd</a></strong></p><h3 id="VGAController(VHDL)-SupportingExampleMaterial">Supporting Example Material</h3><p>Example hardware test image generator:&nbsp; <strong><a href="https://www.digikey.com/eewiki/download/attachments/15925278/hw_image_generator.vhd?version=1&amp;modificationDate=1368216804273&amp;api=v2" data-linked-resource-id="16056327" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="hw_image_generator.vhd" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="15925278" data-linked-resource-container-version="37">hw_image_generator.vhd</a></strong></p><p>Archived complete Quartus II project using the DE2-115 development board: &nbsp; <strong><a href="https://www.digikey.com/eewiki/download/attachments/15925278/vga_with_hw_test_image_v1_1.qar?version=1&amp;modificationDate=1520459439900&amp;api=v2" data-linked-resource-id="70483980" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="vga_with_hw_test_image_v1_1.qar" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="15925278" data-linked-resource-container-version="37">vga_with_hw_test_image_v1_1.qar</a></strong></p><p>Note:&nbsp;
+ If you are unfamiliar with Quartus II archives:&nbsp; you can open the 
+archive file just like a Quartus II project file.&nbsp; When asked you 
+if you want to restore it, say yes, and it places all contents of the 
+original Quartus II project in the folder you specify.</p><h1 id="VGAController(VHDL)-Features">Features</h1><ul><li>VHDL source code of a VGA interface controller</li><li>Generates the signal timing for a VGA interface</li><li>Configurable VGA mode (i.e. resolution and refresh rate)</li><li>Example implementation using a <strong><a href="http://www.digikey.com/product-search/en?x=0&amp;y=0&amp;lang=en&amp;site=us&amp;KeyWords=P0059-ND" class="external-link">DE2-115 development board</a></strong></li></ul><h1 id="VGAController(VHDL)-Introduction">Introduction</h1><p>This
+ details a VGA controller component that handles VGA signal timing, 
+written in VHDL for use with CPLDs and FPGAs.&nbsp; Figure 1 illustrates
+ a typical example of the VGA controller integrated into a system.&nbsp;
+ As shown, the VGA controller requires a pixel clock at the frequency of
+ the VGA mode being implemented.&nbsp; It then derives all of the signal
+ timing necessary to control the interface.&nbsp; It outputs the current
+ pixel coordinates to allow an image source to provide the appropriate 
+pixel values to the video DAC, which in turn drives the VGA monitor’s 
+analog inputs.&nbsp; It also provides the sync signals for the VGA 
+monitor.&nbsp; This component was designed using Quartus II, version 
+12.1.&nbsp; Resource requirements depend on the implementation.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/block_diagram.webp" data-image-src="/eewiki/download/attachments/15925278/block_diagram.jpg?version=1&amp;modificationDate=1368216804227&amp;api=v2" data-unresolved-comment-count="0" data-linked-resource-id="16056323" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="block_diagram.jpg" data-base-url="https://www.digikey.com/eewiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="15925278" data-linked-resource-container-version="37"></span></p><p><strong>Figure 1.</strong>&nbsp; Example Implementation</p><h1 id="VGAController(VHDL)-Background">Background</h1><p>VGA
+ is a standard interface for controlling analog monitors.&nbsp; The 
+computing side of the interface provides the monitor with horizontal and
+ vertical sync signals, color magnitudes, and ground references.</p><p>The
+ horizontal and vertical sync signals are 0V/5V digital waveforms that 
+synchronize the signal timing with the monitor.&nbsp; Being digital, 
+they are provided directly by the FPGA (3.3V meets the minimum threshold
+ for a logical high, so 3.3V can be used instead of 5V).</p><p>The color
+ magnitudes are 0V-0.7V analog signals sent over the R, G, and B 
+wires.&nbsp; (Alternatively, the green wire can use 0.3V-1V signals that
+ incorporate both the horizontal and vertical sync signals, eliminating 
+the need for those lines.&nbsp; This is called <em>sync-on-green</em> 
+and is not addressed here.)&nbsp; The three color magnitude wires are 
+terminated with 75Ω resistors.&nbsp; These lines are also terminated 
+with 75Ω inside the monitor.&nbsp; To create these analog signals, the 
+FPGA outputs an 8-bit bus for each color to a video DAC, in this example
+ an <strong><a href="http://www.digikey.com/product-detail/en/ADV7123KSTZ140/ADV7123KSTZ140-ND/624657" class="external-link">ADV7123</a></strong> from Analog Devices.&nbsp; This video DAC also requires a pixel clock to latch in these values.</p><p>The
+ VGA interface also specifies four wires that can be used to communicate
+ with a ROM in the monitor.&nbsp; This ROM contains EDID (extended 
+display identification data), which consists of the monitor’s parameters
+ in a standard format.&nbsp; Several communication standards exist to 
+access this data, but in the simplest case, these lines can be left 
+unconnected.</p><h1 id="VGAController(VHDL)-Connections">Connections</h1><p>VGA
+ connections use a 15 pin connector called a DB15.&nbsp; Figure 2 shows 
+the DB15 female receptacle.&nbsp; Table 1 lists the pinout for the 
+connector.</p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/vga_connector_female.webp" data-image-src="/eewiki/download/attachments/15925278/vga_connector_female.jpg?version=1&amp;modificationDate=1368216804307&amp;api=v2" data-unresolved-comment-count="0" data-linked-resource-id="16056324" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="vga_connector_female.jpg" data-base-url="https://www.digikey.com/eewiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="15925278" data-linked-resource-container-version="37" width="400"></span></p><p><strong>Figure 2.</strong>&nbsp; VGA Female Connector (DB15 Receptacle)</p><p><strong>Table 1.</strong>&nbsp; VGA Connector Pinout and Signals</p><div class="table-wrap"><table class="wrapped confluenceTable tablesorter tablesorter-default stickyTableHeaders" role="grid" resolved="" style="padding: 0px;"><colgroup><col><col><col><col></colgroup><thead class="tableFloatingHeaderOriginal" style="position: static; margin-top: 0px; left: 325px; z-index: 3; width: 583px; top: 40px;"><tr role="row" class="tablesorter-headerRow"><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Pin: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner"><p>Pin</p></div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Signal: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Signal</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Description: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Description</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Connection: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Connection</div></th></tr></thead><thead class="tableFloatingHeader" style="display: none;"><tr role="row" class="tablesorter-headerRow"><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Pin: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner"><p>Pin</p></div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Signal: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Signal</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Description: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Description</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Connection: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Connection</div></th></tr></thead><tbody aria-live="polite" aria-relevant="all"><tr role="row"><td class="confluenceTd">1</td><td class="confluenceTd"><p>R</p></td><td class="confluenceTd">analog red, 0-0.7V</td><td class="confluenceTd"><p>DAC output</p></td></tr><tr role="row"><td class="confluenceTd">2</td><td class="confluenceTd">G</td><td class="confluenceTd">analog green, 0-0.7V or 0.3-1V (if sync-on-green)</td><td class="confluenceTd">DAC output</td></tr><tr role="row"><td class="confluenceTd">3</td><td class="confluenceTd">B</td><td class="confluenceTd">analog blue, 0-0.7V</td><td class="confluenceTd">DAC output</td></tr><tr role="row"><td class="confluenceTd">4</td><td class="confluenceTd">EDID Interface</td><td class="confluenceTd">function varies depending on standard used</td><td class="confluenceTd">no connect</td></tr><tr role="row"><td class="confluenceTd">5</td><td class="confluenceTd">GND</td><td class="confluenceTd">general</td><td class="confluenceTd">GND</td></tr><tr role="row"><td class="confluenceTd">6</td><td class="confluenceTd">GND</td><td class="confluenceTd">for R</td><td class="confluenceTd">GND</td></tr><tr role="row"><td class="confluenceTd">7</td><td class="confluenceTd">GND</td><td class="confluenceTd">for G</td><td class="confluenceTd">GND</td></tr><tr role="row"><td class="confluenceTd">8</td><td class="confluenceTd">GND</td><td class="confluenceTd"><p>for B</p></td><td class="confluenceTd">GND</td></tr><tr role="row"><td class="confluenceTd">9</td><td class="confluenceTd">no pin</td><td class="confluenceTd">or optional +5V</td><td class="confluenceTd">no connect</td></tr><tr role="row"><td class="confluenceTd">10</td><td class="confluenceTd">GND</td><td class="confluenceTd">for h_sync and v_sync</td><td class="confluenceTd">GND</td></tr><tr role="row"><td class="confluenceTd">11</td><td class="confluenceTd">EDID Interface</td><td class="confluenceTd">function varies depending on standard used</td><td class="confluenceTd">no connect</td></tr><tr role="row"><td class="confluenceTd">12</td><td class="confluenceTd">EDID Interface</td><td class="confluenceTd">function varies depending on standard used</td><td class="confluenceTd">no connect</td></tr><tr role="row"><td class="confluenceTd">13</td><td class="confluenceTd">h_sync</td><td class="confluenceTd">horizontal sync, 0V/5V waveform</td><td class="confluenceTd"><p>FPGA output</p></td></tr><tr role="row"><td class="confluenceTd">14</td><td class="confluenceTd">v_sync</td><td class="confluenceTd">vertical sync, 0V/5V waveform</td><td class="confluenceTd">FPGA output</td></tr><tr role="row"><td class="confluenceTd">15</td><td class="confluenceTd">EDID Interface</td><td class="confluenceTd">function varies depending on standard used</td><td class="confluenceTd">no connect</td></tr></tbody></table></div><h1 id="VGAController(VHDL)-SignalTiming">Signal Timing</h1><p>There
+ are a wide variety of standard VGA modes, each with a specific 
+resolution and refresh rate.&nbsp; Each mode has defined timing 
+parameters.&nbsp; The <strong><a href="http://www.eewiki.net/pages/viewpage.action?pageId=15925278#VGAController%28VHDL%29-Appendix:VGATimingSpecifications" class="external-link">appendix</a></strong>
+ lists the signal timing specifications for numerous VGA modes.&nbsp; 
+The VGA controller uses the GENERIC parameters declared in the ENTITY to
+ set all of the timing specifications except for the pixel clock, which 
+must be provided.</p><p>The provided example implementation of the VGA 
+controller uses a 1920x1200 resolution with a 60Hz refresh rate, which 
+is the maximum resolution of the monitor used.</p><h3 id="VGAController(VHDL)-PixelClock">Pixel Clock</h3><p>This
+ VGA controller requires the user to provide the pixel clock.&nbsp; This
+ can be brought into the FPGA on a dedicated clock pin or can be derived
+ inside the FPGA using a PLL.&nbsp; In the example project for the 
+DE2-115 development board, the available 50MHz clock is input into one 
+of the Cyclone IV FPGA's PLLs to produce a 193.16MHz pixel clock, as 
+required by the 1920x1200 @60Hz VGA mode.</p><h3 id="VGAController(VHDL)-TheoryofOperation">Theory of Operation</h3><p>Figure
+ 3 illustrates the timing signals produced by the VGA controller.&nbsp; 
+The controller contains two counters.&nbsp; One counter increments on 
+pixel clocks and controls the timing of the <em>h_sync</em> (horizontal 
+sync) signal.&nbsp; By setting it up such that the display time starts 
+at counter value 0, the counter value equals the pixel’s column 
+coordinate during the display time.&nbsp; The horizontal display time is
+ followed by a blanking time, which includes a horizontal front porch, 
+the horizontal sync pulse itself, and the horizontal back porch, each of
+ specified duration.&nbsp; At the end of the row, the counter resets to 
+start the next row.</p><p>The other counter increments as each row completes, therefore controlling the timing of the <em>v_sync</em>
+ (vertical sync) signal.&nbsp; Again, this is set up such that the 
+display time starts at counter value 0, so the counter value equals the 
+pixel’s row coordinate during the display time.&nbsp; As before, the 
+vertical display time is followed by a blanking time, with its 
+corresponding front porch, sync pulse, and back porch.&nbsp; Once the 
+vertical blanking time completes, the counter resets to begin the next 
+screen refresh.</p><p>A display enable is defined by the logical AND of the horizontal and vertical display times.</p><p>Using
+ these counters, the VGA controller outputs the horizontal sync, 
+vertical sync, display enable, and pixel coordinate signals.&nbsp; The 
+sync pulses are specified as positive or negative polarity for each VGA 
+mode.&nbsp; The GENERIC parameters <em>h_pol</em> (horizontal polarity) and <em>v_pol</em> (vertical polarity) set the polarity of the VGA controller’s <em>h_sync</em> and <em>v_sync</em> outputs, respectively.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/signal_timing_diagram.webp" data-image-src="/eewiki/download/attachments/15925278/signal_timing_diagram.jpg?version=1&amp;modificationDate=1368216804290&amp;api=v2" data-unresolved-comment-count="0" data-linked-resource-id="16056325" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="signal_timing_diagram.jpg" data-base-url="https://www.digikey.com/eewiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="15925278" data-linked-resource-container-version="37"></span></p><p><strong>Figure 3.</strong>&nbsp; Signal Timing Diagram</p><h1 id="VGAController(VHDL)-PortDescriptions">Port Descriptions</h1><p>Table 2 describes the VGA controller’s ports.</p><p><strong>Table 2.</strong>&nbsp; Port Descriptions</p><div class="table-wrap"><table class="wrapped confluenceTable tablesorter tablesorter-default stickyTableHeaders" role="grid" resolved="" style="padding: 0px;"><colgroup><col><col><col><col><col><col></colgroup><thead class="tableFloatingHeaderOriginal" style="position: static; margin-top: 0px; left: 325px; z-index: 3; width: 1149px; top: 40px;"><tr role="row" class="tablesorter-headerRow"><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Port: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Port</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Width: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Width</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Mode: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Mode</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Data Type: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Data Type</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Interface: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Interface</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none; min-width: 8px; max-width: none;" aria-sort="none" aria-label="Description: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Description</div></th></tr></thead><thead class="tableFloatingHeader" style="display: none;"><tr role="row" class="tablesorter-headerRow"><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Port: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Port</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Width: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Width</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Mode: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Mode</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Data Type: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Data Type</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Interface: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Interface</div></th><th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" style="user-select: none;" aria-sort="none" aria-label="Description: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner">Description</div></th></tr></thead><tbody aria-live="polite" aria-relevant="all"><tr role="row"><td class="confluenceTd">pixel_clk</td><td class="confluenceTd">1</td><td class="confluenceTd">in</td><td class="confluenceTd">standard logic</td><td class="confluenceTd">user logic</td><td class="confluenceTd">Pixel clock at the frequency specified for the desired VGA mode.</td></tr><tr role="row"><td class="confluenceTd">reset_n</td><td class="confluenceTd">1</td><td class="confluenceTd">in</td><td class="confluenceTd">standard logic</td><td class="confluenceTd">user logic</td><td class="confluenceTd">Asynchronous active low reset.</td></tr><tr role="row"><td class="confluenceTd">h_sync</td><td class="confluenceTd">1</td><td class="confluenceTd">out</td><td class="confluenceTd">standard logic</td><td class="confluenceTd">VGA monitor</td><td class="confluenceTd">Horizontal sync signal.</td></tr><tr role="row"><td class="confluenceTd">v_sync</td><td class="confluenceTd">1</td><td class="confluenceTd">out</td><td class="confluenceTd">standard logic</td><td class="confluenceTd">VGA monitor</td><td class="confluenceTd">Vertical sync signal.</td></tr><tr role="row"><td class="confluenceTd">disp_ena</td><td class="confluenceTd">1</td><td class="confluenceTd">out</td><td class="confluenceTd">standard logic</td><td class="confluenceTd">user logic</td><td class="confluenceTd">Display enable; 1 = display time, 0 = blanking time.</td></tr><tr role="row"><td class="confluenceTd">row[31..0]</td><td class="confluenceTd">32</td><td class="confluenceTd">out</td><td class="confluenceTd">integer</td><td class="confluenceTd">user logic</td><td class="confluenceTd">Y pixel coordinate (i.e. row); 0 = top row, number of rows - 1 = bottom row.</td></tr><tr role="row"><td class="confluenceTd">column[31..0]</td><td class="confluenceTd">32</td><td class="confluenceTd">out</td><td class="confluenceTd">integer</td><td class="confluenceTd">user logic</td><td class="confluenceTd">X pixel coordinate (i.e. column), 0 = leftmost column, number of columns - 1 = rightmost column.</td></tr><tr role="row"><td class="confluenceTd">n_blank</td><td class="confluenceTd">1</td><td class="confluenceTd">out</td><td class="confluenceTd">standard logic</td><td class="confluenceTd">video DAC</td><td class="confluenceTd">Determines if direct blanking is used.&nbsp; This example permanently sets this bit to '1', so no direct blanking is used.</td></tr><tr role="row"><td class="confluenceTd">n_sync</td><td class="confluenceTd">1</td><td class="confluenceTd">out</td><td class="confluenceTd">standard logic</td><td class="confluenceTd">video DAC</td><td class="confluenceTd">Determines if sync-on-green is used.&nbsp; This example permanently sets this bit to '0', so no sync-on-green is used.</td></tr></tbody></table></div><h1 id="VGAController(VHDL)-UsingtheVGAController">Using the VGA Controller</h1><p>To
+ use the VGA Controller, simply set the GENERIC parameters in the ENTITY
+ to values specified by the desired VGA mode.&nbsp; The appendix lists 
+the signal timing specifications for many VGA modes.&nbsp; As explained 
+above, the required pixel clock must also be provided.</p><p>In addition
+ to the VGA Controller, the user must also provide an image 
+source.&nbsp; Images are generally provided via file in off-chip memory,
+ but can also be provided by a file in on-chip memory or be generated by
+ the FPGA hardware.&nbsp; The example project here generates a hardware 
+test image with the hw_image_generator.vhd file.&nbsp; This VHDL takes 
+the pixel coordinates and display enable signals from the VGA controller
+ to output color values to the video DAC at the correct times.&nbsp; The
+ test image generated is a 600x478 pixel blue rectangle in the upper 
+left corner of the screen, with the remainder of the screen 
+yellow.&nbsp; Figure 4 shows the resulting test image.</p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/vga_with_hw_image_result.webp" data-image-src="/eewiki/download/attachments/15925278/vga_with_hw_image_result.jpg?version=1&amp;modificationDate=1368216924187&amp;api=v2" data-unresolved-comment-count="0" data-linked-resource-id="16056329" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="vga_with_hw_image_result.jpg" data-base-url="https://www.digikey.com/eewiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="15925278" data-linked-resource-container-version="37" width="500"></span></p><p><strong>Figure 4.</strong>&nbsp; Hardware Generated Test Image</p><h1 id="VGAController(VHDL)-Reset">Reset</h1><p>The <em>reset_n</em>
+ input port must have a logic high for the VGA controller component to 
+operate.&nbsp; A low logic level on this port asynchronously resets the 
+component.&nbsp; During reset, the component deasserts the horizontal 
+and vertical counters, clears the pixel coordinates, and disables the 
+display.&nbsp; Once released from reset, the VGA controller resumes 
+operation.</p><h1 id="VGAController(VHDL)-Conclusion">Conclusion</h1><p>This
+ VGA controller is a programmable logic component that accomplishes the 
+signal timing necessary to interface with a VGA monitor.&nbsp; It 
+requires the user to provide only the pixel clock and, of course, the 
+image source.&nbsp; The VGA controller provides the horizontal and 
+vertical sync signals, as well as the pixel coordinates and display 
+enable needed to produce the image at the proper time.</p><h1 id="VGAController(VHDL)-Appendix:VGATimingSpecifications">Appendix:&nbsp; VGA Timing Specifications</h1><p><strong>Table A1:</strong>&nbsp; Timing Specifications for Various VGA Modes</p><div class="table-wrap"><table class="wrapped confluenceTable" resolved=""><colgroup><col> <col> <col> <col> <col> <col> <col> <col> <col> <col> <col> <col> <col> </colgroup><tbody><tr><td rowspan="2" class="confluenceTd"><strong>Resolution (pixels)<br></strong></td><td rowspan="2" class="confluenceTd"><strong>Refresh Rate (Hz)</strong></td><td rowspan="2" class="confluenceTd"><strong>Pixel Clock (MHz)</strong></td><td style="text-align: center;" colspan="4" class="confluenceTd"><strong>Horizontal (pixel clocks)</strong></td><td style="text-align: center;" colspan="4" class="confluenceTd"><strong>Vertical (rows)</strong></td><td rowspan="2" class="confluenceTd"><strong>h_sync Polarity</strong></td><td rowspan="2" class="confluenceTd"><strong>v_sync Polarity</strong></td></tr><tr><td class="confluenceTd"><strong>Display</strong></td><td class="confluenceTd"><strong>Front Porch</strong></td><td class="confluenceTd"><strong>Sync Pulse</strong></td><td class="confluenceTd"><strong>Back Porch</strong></td><td class="confluenceTd"><strong>Display</strong></td><td class="confluenceTd"><strong>Front Porch</strong></td><td class="confluenceTd"><strong>Sync Pulse</strong></td><td class="confluenceTd"><strong>Back Porch</strong></td></tr><tr><td class="confluenceTd">640x350</td><td class="confluenceTd">70</td><td class="confluenceTd">25.175</td><td class="confluenceTd">640</td><td class="confluenceTd">16</td><td class="confluenceTd">96</td><td class="confluenceTd">48</td><td class="confluenceTd">350</td><td class="confluenceTd">37</td><td class="confluenceTd">2</td><td class="confluenceTd">60</td><td class="confluenceTd">p</td><td class="confluenceTd">n</td></tr><tr><td class="confluenceTd">640x350</td><td class="confluenceTd">85</td><td class="confluenceTd">31.5</td><td class="confluenceTd">640</td><td class="confluenceTd">32</td><td class="confluenceTd">64</td><td class="confluenceTd">96</td><td class="confluenceTd">350</td><td class="confluenceTd">32</td><td class="confluenceTd">3</td><td class="confluenceTd">60</td><td class="confluenceTd">p</td><td class="confluenceTd">n</td></tr><tr><td class="confluenceTd">640x400</td><td class="confluenceTd">70</td><td class="confluenceTd">25.175</td><td class="confluenceTd">640</td><td class="confluenceTd">16</td><td class="confluenceTd">96</td><td class="confluenceTd">48</td><td class="confluenceTd">400</td><td class="confluenceTd">12</td><td class="confluenceTd">2</td><td class="confluenceTd">35</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">640x400</td><td class="confluenceTd">85</td><td class="confluenceTd">31.5</td><td class="confluenceTd">640</td><td class="confluenceTd">32</td><td class="confluenceTd">64</td><td class="confluenceTd">96</td><td class="confluenceTd">400</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">41</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">640x480</td><td class="confluenceTd">60</td><td class="confluenceTd">25.175</td><td class="confluenceTd">640</td><td class="confluenceTd">16</td><td class="confluenceTd">96</td><td class="confluenceTd">48</td><td class="confluenceTd">480</td><td class="confluenceTd">10</td><td class="confluenceTd">2</td><td class="confluenceTd">33</td><td class="confluenceTd">n</td><td class="confluenceTd">n</td></tr><tr><td class="confluenceTd">640x480</td><td class="confluenceTd">73</td><td class="confluenceTd">31.5</td><td class="confluenceTd">640</td><td class="confluenceTd">24</td><td class="confluenceTd">40</td><td class="confluenceTd">128</td><td class="confluenceTd">480</td><td class="confluenceTd">9</td><td class="confluenceTd">2</td><td class="confluenceTd">29</td><td class="confluenceTd">n</td><td class="confluenceTd">n</td></tr><tr><td class="confluenceTd">640x480</td><td class="confluenceTd">75</td><td class="confluenceTd">31.5</td><td class="confluenceTd">640</td><td class="confluenceTd">16</td><td class="confluenceTd">64</td><td class="confluenceTd">120</td><td class="confluenceTd">480</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">16</td><td class="confluenceTd">n</td><td class="confluenceTd">n</td></tr><tr><td class="confluenceTd">640x480</td><td class="confluenceTd">85</td><td class="confluenceTd">36</td><td class="confluenceTd">640</td><td class="confluenceTd">56</td><td class="confluenceTd">56</td><td class="confluenceTd">80</td><td class="confluenceTd">480</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">25</td><td class="confluenceTd">n</td><td class="confluenceTd">n</td></tr><tr><td class="confluenceTd">640x480</td><td class="confluenceTd">100</td><td class="confluenceTd">43.16</td><td class="confluenceTd">640</td><td class="confluenceTd">40</td><td class="confluenceTd">64</td><td class="confluenceTd">104</td><td class="confluenceTd">480</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">25</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">720x400</td><td class="confluenceTd">85</td><td class="confluenceTd">35.5</td><td class="confluenceTd">720</td><td class="confluenceTd">36</td><td class="confluenceTd">72</td><td class="confluenceTd">108</td><td class="confluenceTd">400</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">42</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">768x576</td><td class="confluenceTd">60</td><td class="confluenceTd">34.96</td><td class="confluenceTd">768</td><td class="confluenceTd">24</td><td class="confluenceTd">80</td><td class="confluenceTd">104</td><td class="confluenceTd">576</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">17</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">768x576</td><td class="confluenceTd">72</td><td class="confluenceTd">42.93</td><td class="confluenceTd">768</td><td class="confluenceTd">32</td><td class="confluenceTd">80</td><td class="confluenceTd">112</td><td class="confluenceTd">576</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">21</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">768x576</td><td class="confluenceTd">75</td><td class="confluenceTd">45.51</td><td class="confluenceTd">768</td><td class="confluenceTd">40</td><td class="confluenceTd">80</td><td class="confluenceTd">120</td><td class="confluenceTd">576</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">22</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">768x576</td><td class="confluenceTd">85</td><td class="confluenceTd">51.84</td><td class="confluenceTd">768</td><td class="confluenceTd">40</td><td class="confluenceTd">80</td><td class="confluenceTd">120</td><td class="confluenceTd">576</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">25</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">768x576</td><td class="confluenceTd">100</td><td class="confluenceTd">62.57</td><td class="confluenceTd">768</td><td class="confluenceTd">48</td><td class="confluenceTd">80</td><td class="confluenceTd">128</td><td class="confluenceTd">576</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">31</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">800x600</td><td class="confluenceTd">56</td><td class="confluenceTd">36</td><td class="confluenceTd">800</td><td class="confluenceTd">24</td><td class="confluenceTd">72</td><td class="confluenceTd">128</td><td class="confluenceTd">600</td><td class="confluenceTd">1</td><td class="confluenceTd">2</td><td class="confluenceTd">22</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">800x600</td><td class="confluenceTd">60</td><td class="confluenceTd">40</td><td class="confluenceTd">800</td><td class="confluenceTd">40</td><td class="confluenceTd">128</td><td class="confluenceTd">88</td><td class="confluenceTd">600</td><td class="confluenceTd">1</td><td class="confluenceTd">4</td><td class="confluenceTd">23</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">800x600</td><td class="confluenceTd">75</td><td class="confluenceTd">49.5</td><td class="confluenceTd">800</td><td class="confluenceTd">16</td><td class="confluenceTd">80</td><td class="confluenceTd">160</td><td class="confluenceTd">600</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">21</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">800x600</td><td class="confluenceTd">72</td><td class="confluenceTd">50</td><td class="confluenceTd">800</td><td class="confluenceTd">56</td><td class="confluenceTd">120</td><td class="confluenceTd">64</td><td class="confluenceTd">600</td><td class="confluenceTd">37</td><td class="confluenceTd">6</td><td class="confluenceTd">23</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">800x600</td><td class="confluenceTd">85</td><td class="confluenceTd">56.25</td><td class="confluenceTd">800</td><td class="confluenceTd">32</td><td class="confluenceTd">64</td><td class="confluenceTd">152</td><td class="confluenceTd">600</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">27</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">800x600</td><td class="confluenceTd">100</td><td class="confluenceTd">68.18</td><td class="confluenceTd">800</td><td class="confluenceTd">48</td><td class="confluenceTd">88</td><td class="confluenceTd">136</td><td class="confluenceTd">600</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">32</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1024x768</td><td class="confluenceTd">43</td><td class="confluenceTd">44.9</td><td class="confluenceTd">1024</td><td class="confluenceTd">8</td><td class="confluenceTd">176</td><td class="confluenceTd">56</td><td class="confluenceTd">768</td><td class="confluenceTd">0</td><td class="confluenceTd">8</td><td class="confluenceTd">41</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1024x768</td><td class="confluenceTd">60</td><td class="confluenceTd">65</td><td class="confluenceTd">1024</td><td class="confluenceTd">24</td><td class="confluenceTd">136</td><td class="confluenceTd">160</td><td class="confluenceTd">768</td><td class="confluenceTd">3</td><td class="confluenceTd">6</td><td class="confluenceTd">29</td><td class="confluenceTd">n</td><td class="confluenceTd">n</td></tr><tr><td class="confluenceTd">1024x768</td><td class="confluenceTd">70</td><td class="confluenceTd">75</td><td class="confluenceTd">1024</td><td class="confluenceTd">24</td><td class="confluenceTd">136</td><td class="confluenceTd">144</td><td class="confluenceTd">768</td><td class="confluenceTd">3</td><td class="confluenceTd">6</td><td class="confluenceTd">29</td><td class="confluenceTd">n</td><td class="confluenceTd">n</td></tr><tr><td class="confluenceTd">1024x768</td><td class="confluenceTd">75</td><td class="confluenceTd">78.8</td><td class="confluenceTd">1024</td><td class="confluenceTd">16</td><td class="confluenceTd">96</td><td class="confluenceTd">176</td><td class="confluenceTd">768</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">28</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1024x768</td><td class="confluenceTd">85</td><td class="confluenceTd">94.5</td><td class="confluenceTd">1024</td><td class="confluenceTd">48</td><td class="confluenceTd">96</td><td class="confluenceTd">208</td><td class="confluenceTd">768</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">36</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1024x768</td><td class="confluenceTd">100</td><td class="confluenceTd">113.31</td><td class="confluenceTd">1024</td><td class="confluenceTd">72</td><td class="confluenceTd">112</td><td class="confluenceTd">184</td><td class="confluenceTd">768</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">42</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1152x864</td><td class="confluenceTd">75</td><td class="confluenceTd">108</td><td class="confluenceTd">1152</td><td class="confluenceTd">64</td><td class="confluenceTd">128</td><td class="confluenceTd">256</td><td class="confluenceTd">864</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">32</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1152x864</td><td class="confluenceTd">85</td><td class="confluenceTd">119.65</td><td class="confluenceTd">1152</td><td class="confluenceTd">72</td><td class="confluenceTd">128</td><td class="confluenceTd">200</td><td class="confluenceTd">864</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">39</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1152x864</td><td class="confluenceTd">100</td><td class="confluenceTd">143.47</td><td class="confluenceTd">1152</td><td class="confluenceTd">80</td><td class="confluenceTd">128</td><td class="confluenceTd">208</td><td class="confluenceTd">864</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">47</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1152x864</td><td class="confluenceTd">60</td><td class="confluenceTd">81.62</td><td class="confluenceTd">1152</td><td class="confluenceTd">64</td><td class="confluenceTd">120</td><td class="confluenceTd">184</td><td class="confluenceTd">864</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">27</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x1024</td><td class="confluenceTd">60</td><td class="confluenceTd">108</td><td class="confluenceTd">1280</td><td class="confluenceTd">48</td><td class="confluenceTd">112</td><td class="confluenceTd">248</td><td class="confluenceTd">1024</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">38</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x1024</td><td class="confluenceTd">75</td><td class="confluenceTd">135</td><td class="confluenceTd">1280</td><td class="confluenceTd">16</td><td class="confluenceTd">144</td><td class="confluenceTd">248</td><td class="confluenceTd">1024</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">38</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x1024</td><td class="confluenceTd">85</td><td class="confluenceTd">157.5</td><td class="confluenceTd">1280</td><td class="confluenceTd">64</td><td class="confluenceTd">160</td><td class="confluenceTd">224</td><td class="confluenceTd">1024</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">44</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x1024</td><td class="confluenceTd">100</td><td class="confluenceTd">190.96</td><td class="confluenceTd">1280</td><td class="confluenceTd">96</td><td class="confluenceTd">144</td><td class="confluenceTd">240</td><td class="confluenceTd">1024</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">57</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x800</td><td class="confluenceTd">60</td><td class="confluenceTd">83.46</td><td class="confluenceTd">1280</td><td class="confluenceTd">64</td><td class="confluenceTd">136</td><td class="confluenceTd">200</td><td class="confluenceTd">800</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">24</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x960</td><td class="confluenceTd">60</td><td class="confluenceTd">102.1</td><td class="confluenceTd">1280</td><td class="confluenceTd">80</td><td class="confluenceTd">136</td><td class="confluenceTd">216</td><td class="confluenceTd">960</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">30</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x960</td><td class="confluenceTd">72</td><td class="confluenceTd">124.54</td><td class="confluenceTd">1280</td><td class="confluenceTd">88</td><td class="confluenceTd">136</td><td class="confluenceTd">224</td><td class="confluenceTd">960</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">37</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x960</td><td class="confluenceTd">75</td><td class="confluenceTd">129.86</td><td class="confluenceTd">1280</td><td class="confluenceTd">88</td><td class="confluenceTd">136</td><td class="confluenceTd">224</td><td class="confluenceTd">960</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">38</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x960</td><td class="confluenceTd">85</td><td class="confluenceTd">148.5</td><td class="confluenceTd">1280</td><td class="confluenceTd">64</td><td class="confluenceTd">160</td><td class="confluenceTd">224</td><td class="confluenceTd">960</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">47</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1280x960</td><td class="confluenceTd">100</td><td class="confluenceTd">178.99</td><td class="confluenceTd">1280</td><td class="confluenceTd">96</td><td class="confluenceTd">144</td><td class="confluenceTd">240</td><td class="confluenceTd">960</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">53</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1368x768</td><td class="confluenceTd">60</td><td class="confluenceTd">85.86</td><td class="confluenceTd">1368</td><td class="confluenceTd">72</td><td class="confluenceTd">144</td><td class="confluenceTd">216</td><td class="confluenceTd">768</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">23</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1400x1050</td><td class="confluenceTd">60</td><td class="confluenceTd">122.61</td><td class="confluenceTd">1400</td><td class="confluenceTd">88</td><td class="confluenceTd">152</td><td class="confluenceTd">240</td><td class="confluenceTd">1050</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">33</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1400x1050</td><td class="confluenceTd">72</td><td class="confluenceTd">149.34</td><td class="confluenceTd">1400</td><td class="confluenceTd">96</td><td class="confluenceTd">152</td><td class="confluenceTd">248</td><td class="confluenceTd">1050</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">40</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1400x1050</td><td class="confluenceTd">75</td><td class="confluenceTd">155.85</td><td class="confluenceTd">1400</td><td class="confluenceTd">96</td><td class="confluenceTd">152</td><td class="confluenceTd">248</td><td class="confluenceTd">1050</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">42</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1400x1050</td><td class="confluenceTd">85</td><td class="confluenceTd">179.26</td><td class="confluenceTd">1400</td><td class="confluenceTd">104</td><td class="confluenceTd">152</td><td class="confluenceTd">256</td><td class="confluenceTd">1050</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">49</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1400x1050</td><td class="confluenceTd">100</td><td class="confluenceTd">214.39</td><td class="confluenceTd">1400</td><td class="confluenceTd">112</td><td class="confluenceTd">152</td><td class="confluenceTd">264</td><td class="confluenceTd">1050</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">58</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1440x900</td><td class="confluenceTd">60</td><td class="confluenceTd">106.47</td><td class="confluenceTd">1440</td><td class="confluenceTd">80</td><td class="confluenceTd">152</td><td class="confluenceTd">232</td><td class="confluenceTd">900</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">28</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1600x1200</td><td class="confluenceTd">60</td><td class="confluenceTd">162</td><td class="confluenceTd">1600</td><td class="confluenceTd">64</td><td class="confluenceTd">192</td><td class="confluenceTd">304</td><td class="confluenceTd">1200</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">46</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1600x1200</td><td class="confluenceTd">65</td><td class="confluenceTd">175.5</td><td class="confluenceTd">1600</td><td class="confluenceTd">64</td><td class="confluenceTd">192</td><td class="confluenceTd">304</td><td class="confluenceTd">1200</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">46</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1600x1200</td><td class="confluenceTd">70</td><td class="confluenceTd">189</td><td class="confluenceTd">1600</td><td class="confluenceTd">64</td><td class="confluenceTd">192</td><td class="confluenceTd">304</td><td class="confluenceTd">1200</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">46</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1600x1200</td><td class="confluenceTd">75</td><td class="confluenceTd">202.5</td><td class="confluenceTd">1600</td><td class="confluenceTd">64</td><td class="confluenceTd">192</td><td class="confluenceTd">304</td><td class="confluenceTd">1200</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">46</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1600x1200</td><td class="confluenceTd">85</td><td class="confluenceTd">229.5</td><td class="confluenceTd">1600</td><td class="confluenceTd">64</td><td class="confluenceTd">192</td><td class="confluenceTd">304</td><td class="confluenceTd">1200</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">46</td><td class="confluenceTd">p</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1600x1200</td><td class="confluenceTd">100</td><td class="confluenceTd">280.64</td><td class="confluenceTd">1600</td><td class="confluenceTd">128</td><td class="confluenceTd">176</td><td class="confluenceTd">304</td><td class="confluenceTd">1200</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">67</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1680x1050</td><td class="confluenceTd">60</td><td class="confluenceTd">147.14</td><td class="confluenceTd">1680</td><td class="confluenceTd">104</td><td class="confluenceTd">184</td><td class="confluenceTd">288</td><td class="confluenceTd">1050</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">33</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1792x1344</td><td class="confluenceTd">60</td><td class="confluenceTd">204.8</td><td class="confluenceTd">1792</td><td class="confluenceTd">128</td><td class="confluenceTd">200</td><td class="confluenceTd">328</td><td class="confluenceTd">1344</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">46</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1792x1344</td><td class="confluenceTd">75</td><td class="confluenceTd">261</td><td class="confluenceTd">1792</td><td class="confluenceTd">96</td><td class="confluenceTd">216</td><td class="confluenceTd">352</td><td class="confluenceTd">1344</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">69</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1856x1392</td><td class="confluenceTd">60</td><td class="confluenceTd">218.3</td><td class="confluenceTd">1856</td><td class="confluenceTd">96</td><td class="confluenceTd">224</td><td class="confluenceTd">352</td><td class="confluenceTd">1392</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">43</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1856x1392</td><td class="confluenceTd">75</td><td class="confluenceTd">288</td><td class="confluenceTd">1856</td><td class="confluenceTd">128</td><td class="confluenceTd">224</td><td class="confluenceTd">352</td><td class="confluenceTd">1392</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">104</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1920x1200</td><td class="confluenceTd">60</td><td class="confluenceTd">193.16</td><td class="confluenceTd">1920</td><td class="confluenceTd">128</td><td class="confluenceTd">208</td><td class="confluenceTd">336</td><td class="confluenceTd">1200</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">38</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1920x1440</td><td class="confluenceTd">60</td><td class="confluenceTd">234</td><td class="confluenceTd">1920</td><td class="confluenceTd">128</td><td class="confluenceTd">208</td><td class="confluenceTd">344</td><td class="confluenceTd">1440</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">56</td><td class="confluenceTd">n</td><td class="confluenceTd">p</td></tr><tr><td class="confluenceTd">1920x1440</td><td class="confluenceTd">75</td><td class="confluenceTd">297</td><td class="confluenceTd">1920</td><td class="confluenceTd">144</td><td class="confluenceTd">224</td><td class="confluenceTd">352</td><td class="confluenceTd">1440</td><td class="confluenceTd">1</td><td class="confluenceTd">3</td><td class="confluenceTd">56</td><td class="confluenceTd">n</td><td class="confluenceTd"><p>p</p></td></tr></tbody></table></div><h1 id="VGAController(VHDL)-Contact">Contact</h1><p>Comments, feedback, and questions can be sent to <a class="external-link" href="mailto:eewiki@digikey.com" rel="nofollow">eewiki@digikey.com</a>.</p><p>&nbsp;</p>
+
+                
+        
+    
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="https://www.digikey.com/eewiki/pages/viewpage.action?pageId=15925278"
+    dc:identifier="https://www.digikey.com/eewiki/pages/viewpage.action?pageId=15925278"
+    dc:title="VGA Controller (VHDL)"
+    trackback:ping="https://www.digikey.com/eewiki/rpc/trackback/15925278"/>
+</rdf:RDF>
+-->
+
+                        
+    
+
+
+
+<div id="likes-and-labels-container"><div id="likes-section" class="no-print" style="display: none;"><span class="like-summary"></span></div><div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="15925278" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+            <li class="no-labels-message">
+            No labels
+        </li>
+            </ul>
+
+    </div>
+</div>
+</div></div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+        
+    
+
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="Overview" data-href="/eewiki/spaces/viewspacesummary.action?key=LOGIC">Overview</div>
+            <div data-label="Content Tools" data-href="/eewiki/pages/reorderpages.action?key=LOGIC">Content Tools</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo" style="margin-left: 285px;">
+    <section class="footer-body">
+
+                                                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">Powered by <a href="http://www.atlassian.com/software/confluence" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id="footer-build-information">6.13.7</span></li>
+            <li class="print-only">Printed by Atlassian Confluence 6.13.7</li>
+            <li class="noprint"><a href="https://support.atlassian.com/help/confluence" class="hover-footer-link" rel="nofollow">Report a bug</a></li>
+            <li class="noprint"><a href="http://www.atlassian.com/about/connected.jsp?s_kwcid=Confluence-stayintouch" class="hover-footer-link" rel="nofollow">Atlassian News</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="http://www.atlassian.com/" rel="nofollow">Atlassian</a></div>
+
+                    <script>
+$(".cookie-notice a.button").click(function() {
+    localStorage.setItem("gdpr_cookie_consent", JSON.stringify({ "acceptedOn": new Date() }));
+    clearCookieDisplay();
+})
+   
+function createCookieLS() {
+    clearCookieDisplay();
+    localStorage.setItem("gdpr_cookie_consent", JSON.stringify({ "acceptedOn": new Date() }));
+}
+
+function clearCookieDisplay(){
+    document.getElementsByClassName("cookie-notice")[0].style.display = "none";
+    document.getElementsByClassName("cookie-mask")[0].style.display = "none";
+    document.getElementsByTagName("body")[0].style.marginTop = "0";
+    document.getElementsByTagName("body")[0].style.backgroundPosition = "0px 0px";
+}
+
+if (localStorage.getItem("gdpr_cookie_consent") == null) {
+    //document.body.insertAdjacentHTML("beforeend", window.__gdprtext);
+    document.body.className += " gdpr";
+}
+else {
+    var cookieconsent = document.getElementsByClassName('cookie-notice');
+    if (cookieconsent.length) {
+        clearCookieDisplay();
+    }
+}
+
+</script>
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 163, "requestCorrelationId": "d1f103f4e8fe96f7"}</span>
+
+
+<script type="text/javascript">
+    AJS.BigPipe = AJS.BigPipe || {};
+    AJS.BigPipe.metrics = AJS.BigPipe.metrics || {};
+    AJS.BigPipe.metrics.pageEnd = typeof window.performance !== "undefined" && typeof window.performance.now === "function"
+                                    ? Math.ceil(window.performance.now()) : 0;
+    AJS.BigPipe.metrics.isBigPipeEnabled = 'false' === 'true';
+</script>
+<noscript><img src="https://www.digikey.com/akam/11/pixel_36ebb8d8?a=dD00NTIzN2M0ZjJkNGNmZGRkODhhNTQ4NTIxZTY2MDMzOTQwMzE5Mjk2JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript">var _cf = _cf || []; _cf.push(['_setFsp', true]);  _cf.push(['_setBm', true]);  _cf.push(['_setAu', '/resources/ef504f21f5rn220aac9d52ccb88afe0d']); </script><script type="text/javascript" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/ef504f21f5rn220aac9d52ccb88afe0d"></script>
+
+    
+<div id="editor-preload-container" style="display: none;">
+ 
+
+<div class="hidden">
+        
+
+
+<content tag="breadcrumbs">
+    
+    
+    <ol id="quickedit-breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="https://www.digikey.com/eewiki/display/LOGIC" target="_blank">Logic</a></span>
+                                                                                    
+                        
+        </li><li>
+                        
+                            <span class=""><a href="https://www.digikey.com/eewiki/collector/pages.action?key=LOGIC" target="_blank">Dashboard</a></span>
+                                                                                    
+                        
+        </li><li>
+                        
+                            <span class=""><a href="https://www.digikey.com/eewiki/display/LOGIC/Home" target="_blank">Home</a></span>
+                                                                                    
+                        
+        </li><li>
+                        
+                            <span class="edited-page-title"><a href="https://www.digikey.com/eewiki/pages/viewpage.action?pageId=15925278" target="_blank">VGA Controller (VHDL)</a></span>
+                                                                    </li></ol>
+
+</content>
+</div>
+
+
+        
+    <div id="anonymous-warning" class="aui-message aui-message-warning closeable">You are not logged in. Any changes you make will be marked as <span class="smalltext">anonymous</span>. You may want to <a href="https://www.digikey.com/eewiki/login.action?os_destination=%2Fpages%2Fviewpage.action">Log In</a> if you already have an account.</div>
+
+                                                                                        
+
+<script type="text/x-template" title="editor-css" id="editor-css-resources">
+    <link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/3.1.0/_/download/batch/com.atlassian.confluence.plugins.confluence-collaborative-editor-plugin:confluence-collaborative-editor-plugin-editor-content-resources/com.atlassian.confluence.plugins.confluence-collaborative-editor-plugin:confluence-collaborative-editor-plugin-editor-content-resources.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-collaborative-editor-plugin:confluence-collaborative-editor-plugin-editor-content-resources" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/025db4566562116adc5cdff41cef8e9a-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/7.9.7/_/download/batch/com.atlassian.auiplugin:aui-page-typography/com.atlassian.auiplugin:aui-page-typography.css" data-wrm-key="com.atlassian.auiplugin:aui-page-typography" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/025db4566562116adc5cdff41cef8e9a-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/7.9.7/_/download/batch/com.atlassian.auiplugin:aui-link/com.atlassian.auiplugin:aui-link.css" data-wrm-key="com.atlassian.auiplugin:aui-link" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/025db4566562116adc5cdff41cef8e9a-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/7.9.7/_/download/batch/com.atlassian.auiplugin:aui-avatars/com.atlassian.auiplugin:aui-avatars.css" data-wrm-key="com.atlassian.auiplugin:aui-avatars" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/47a8861ddeabe407d6a865c6dde5d487-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/7.9.7/_/download/batch/com.atlassian.auiplugin:aui-page-layout/com.atlassian.auiplugin:aui-page-layout.css" data-wrm-key="com.atlassian.auiplugin:aui-page-layout" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/ea5e7dcb04555b20b8af59386d2df646-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/6.13.7/_/download/batch/com.atlassian.confluence.editor:editor-content-styles/com.atlassian.confluence.editor:editor-content-styles.css" data-wrm-key="com.atlassian.confluence.editor:editor-content-styles" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/ea5e7dcb04555b20b8af59386d2df646-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/6.13.7/_/download/batch/com.atlassian.confluence.editor:table-resizable-editor-content-styles/com.atlassian.confluence.editor:table-resizable-editor-content-styles.css?confluence.table.resizable=true" data-wrm-key="com.atlassian.confluence.editor:table-resizable-editor-content-styles" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/ea5e7dcb04555b20b8af59386d2df646-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/6.13.7/_/download/batch/com.atlassian.confluence.editor:table-resizable-styles/com.atlassian.confluence.editor:table-resizable-styles.css?confluence.table.resizable=true" data-wrm-key="com.atlassian.confluence.editor:table-resizable-styles" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/6.13.7/_/download/batch/com.atlassian.confluence.plugins.confluence-templates:variable-editor-content-styles/com.atlassian.confluence.plugins.confluence-templates:variable-editor-content-styles.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-templates:variable-editor-content-styles" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/025db4566562116adc5cdff41cef8e9a-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/7.9.7/_/download/batch/com.atlassian.auiplugin:aui-lozenge/com.atlassian.auiplugin:aui-lozenge.css" data-wrm-key="com.atlassian.auiplugin:aui-lozenge" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/85aded984d32e6df43893124b5aff573-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/3.0.4/_/download/batch/com.atlassian.confluence.plugins.status-macro:view_content_status/com.atlassian.confluence.plugins.status-macro:view_content_status.css" data-wrm-key="com.atlassian.confluence.plugins.status-macro:view_content_status" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/85aded984d32e6df43893124b5aff573-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/3.0.4/_/download/batch/com.atlassian.confluence.plugins.status-macro:editor_content_status/com.atlassian.confluence.plugins.status-macro:editor_content_status.css" data-wrm-key="com.atlassian.confluence.plugins.status-macro:editor_content_status" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/9daf7afbce8f12b08a5c226d5aed29c7-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/3.1.14/_/download/batch/com.atlassian.confluence.plugins.confluence-mentions-plugin:smart-mentions-editor-content-resources/com.atlassian.confluence.plugins.confluence-mentions-plugin:smart-mentions-editor-content-resources.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-mentions-plugin:smart-mentions-editor-content-resources" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/ede33f6239550361f4d207cc5a092378-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/16.13.0/_/download/batch/com.atlassian.confluence.plugins.confluence-fixed-headers:confluence-fixed-headers-editor-content-resources/com.atlassian.confluence.plugins.confluence-fixed-headers:confluence-fixed-headers-editor-content-resources.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-fixed-headers:confluence-fixed-headers-editor-content-resources" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/a0e894d2f295b40fda5171460781b200-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/6.0.3/_/download/batch/confluence.extra.attachments:attachments-css/confluence.extra.attachments:attachments-css.css" data-wrm-key="confluence.extra.attachments:attachments-css" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/14.2.1/_/download/batch/com.atlassian.confluence.plugins.confluence-roadmap-plugin:roadmap-placeholder-css/com.atlassian.confluence.plugins.confluence-roadmap-plugin:roadmap-placeholder-css.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-roadmap-plugin:roadmap-placeholder-css" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/1.0/_/download/batch/confluence.web.resources:panel-styles/confluence.web.resources:panel-styles.css" data-wrm-key="confluence.web.resources:panel-styles" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/c2ff62f983390ed0a5cd66a7cd6893a6-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/1.0/_/download/batch/confluence.web.resources:content-styles/confluence.web.resources:content-styles.css" data-wrm-key="confluence.web.resources:content-styles" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/6.13.7/_/download/batch/com.atlassian.confluence.plugins.confluence-page-layout:editor-pagelayout-content-styles/com.atlassian.confluence.plugins.confluence-page-layout:editor-pagelayout-content-styles.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-page-layout:editor-pagelayout-content-styles" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/11.0.2/_/download/batch/com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-styles/com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-styles.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-styles" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/11.0.2/_/download/batch/com.atlassian.confluence.plugins.confluence-inline-tasks:editor-autocomplete-date-css/com.atlassian.confluence.plugins.confluence-inline-tasks:editor-autocomplete-date-css.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-inline-tasks:editor-autocomplete-date-css" data-wrm-batch-type="resource" media="all">
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/11.0.2/_/download/batch/com.atlassian.confluence.plugins.confluence-inline-tasks:editor-autocomplete-date-css/com.atlassian.confluence.plugins.confluence-inline-tasks:editor-autocomplete-date-css.css?conditionalComment=lte+IE+9" data-wrm-key="com.atlassian.confluence.plugins.confluence-inline-tasks:editor-autocomplete-date-css" data-wrm-batch-type="resource" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/eewiki/s/5baeb58a5608e28c5f241eee74f064b2-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/4.0.2/_/download/batch/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-editor-content-resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-editor-content-resources.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-editor-content-resources" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/5.1.4/_/download/batch/com.atlassian.confluence.plugins.confluence-software-blueprints:common-resources/com.atlassian.confluence.plugins.confluence-software-blueprints:common-resources.css" data-wrm-key="com.atlassian.confluence.plugins.confluence-software-blueprints:common-resources" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/154/_/styles/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="/eewiki/s/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/154/_/styles/custom.css" media="all">
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+<div class="editor-container">
+
+        
+            
+
+<div id="link-browser-tab-items" class="hidden">
+                <div title="Search" data-weight="10">search</div>
+            <div title="Files" data-weight="30">attachments</div>
+            <div title="Web link" data-weight="40">weblink</div>
+            <div title="Advanced" data-weight="50">advanced</div>
+    </div>
+            <div id="image-properties-tab-items" class="hidden">
+                <div title="Effects" data-weight="10">image-effects</div>
+            <div title="Title" data-weight="20">image-attributes</div>
+    </div>
+            
+
+ 
+
+
+
+
+
+
+
+
+
+
+<div id="toolbar">
+    <div id="rte-toolbar" class="aui-toolbar aui-toolbar2">
+
+        <div class="aui-toolbar2-primary toolbar-primary">
+            <ul class="aui-buttons rte-toolbar-group-formatting">
+                            <li id="format-dropdown" class="toolbar-item toolbar-dropdown">
+                    <div class="aui-dd-parent">
+                        <a id="format-dropdown-display" href="#" class="toolbar-trigger aui-dd-trigger aui-button" data-control-id="formatselect">
+                            <span class="dropdown-text">Paragraph</span>
+                                        
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-dropdown "></span>
+                        </a>
+                        <ul id="format-dropdown-display-menu" class="aui-dropdown hidden">
+                            <li class="dropdown-item format-p" data-format="p" data-tooltip="Paragraph (Ctrl+0)">
+    <a class="item-link" href="#">Paragraph</a>
+</li>
+                                <li class="dropdown-item format-h1" data-format="h1" data-tooltip="Heading 1 (Ctrl+1)">
+    <a class="item-link" href="#">Heading 1</a>
+</li>
+                                <li class="dropdown-item format-h2" data-format="h2" data-tooltip="Heading 2 (Ctrl+2)">
+    <a class="item-link" href="#">Heading 2</a>
+</li>
+                                <li class="dropdown-item format-h3" data-format="h3" data-tooltip="Heading 3 (Ctrl+3)">
+    <a class="item-link" href="#">Heading 3</a>
+</li>
+                                <li class="dropdown-item format-h4" data-format="h4" data-tooltip="Heading 4 (Ctrl+4)">
+    <a class="item-link" href="#">Heading 4</a>
+</li>
+                                <li class="dropdown-item format-h5" data-format="h5" data-tooltip="Heading 5 (Ctrl+5)">
+    <a class="item-link" href="#">Heading 5</a>
+</li>
+                                <li class="dropdown-item format-h6" data-format="h6" data-tooltip="Heading 6 (Ctrl+6)">
+    <a class="item-link" href="#">Heading 6</a>
+</li>
+                                <li class="dropdown-item format-pre" data-format="pre" data-tooltip="Preformatted (Ctrl+7)">
+    <a class="item-link" href="#">Preformatted</a>
+</li>
+                                <li class="dropdown-item format-blockquote" data-format="blockquote" data-tooltip="Quote (Ctrl+8)">
+    <a class="item-link" href="#">Quote</a>
+</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="aui-buttons rte-toolbar-group-style">
+                
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-bold" data-tooltip="Bold (Ctrl+B)">
+    <a class="toolbar-trigger" href="#" data-control-id="bold">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-bold ">Bold</span>
+    </a>
+</li>
+                
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-italic" data-tooltip="Italic (Ctrl+I)">
+    <a class="toolbar-trigger" href="#" data-control-id="italic">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-italic ">Italic</span>
+    </a>
+</li>
+                
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-underline" data-tooltip="Underline (Ctrl+U)">
+    <a class="toolbar-trigger" href="#" data-control-id="underline">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-underline ">Underline</span>
+    </a>
+</li>
+                            <li id="color-picker-control" class="toolbar-item toolbar-splitbutton">
+                    <a class="toolbar-trigger aui-button" href="#" id="rte-button-color" data-color="003366" data-tooltip="Color"><span class="icon aui-icon aui-icon-small aui-iconfont-editor-color ">Color picker</span><span class="selected-color"></span></a><div class="aui-dd-parent"><a class="toolbar-trigger aui-dd-trigger aui-button" href="#" id="rte-button-color-selector" data-control-id="colorSelector" data-tooltip="More colors"><span class="icon aui-icon aui-icon-small aui-iconfont-dropdown ">More colors</span></a><div class="color-picker-container"><div class="color-picker aui-dropdown hidden"><ul><li><a href="#" aria-label="Black" data-tooltip="Black" style="background-color: #000000" data-color="000000">&nbsp;</a></li><li><a href="#" aria-label="Burnt orange" data-tooltip="Burnt orange" style="background-color: #993300" data-color="993300">&nbsp;</a></li><li><a href="#" aria-label="Dark olive" data-tooltip="Dark olive" style="background-color: #333300" data-color="333300">&nbsp;</a></li><li><a href="#" aria-label="Dark green" data-tooltip="Dark green" style="background-color: #003300" data-color="003300">&nbsp;</a></li><li><a href="#" aria-label="Dark azure" data-tooltip="Dark azure" style="background-color: #003366" data-color="003366">&nbsp;</a></li><li><a href="#" aria-label="Navy blue" data-tooltip="Navy blue" style="background-color: #000080" data-color="000080">&nbsp;</a></li><li><a href="#" aria-label="Indigo" data-tooltip="Indigo" style="background-color: #333399" data-color="333399">&nbsp;</a></li><li><a href="#" aria-label="Very dark grey" data-tooltip="Very dark grey" style="background-color: #333333" data-color="333333">&nbsp;</a></li><li><a href="#" aria-label="Maroon" data-tooltip="Maroon" style="background-color: #800000" data-color="800000">&nbsp;</a></li><li><a href="#" aria-label="Orange" data-tooltip="Orange" style="background-color: #FF6600" data-color="FF6600">&nbsp;</a></li><li><a href="#" aria-label="Olive" data-tooltip="Olive" style="background-color: #808000" data-color="808000">&nbsp;</a></li><li><a href="#" aria-label="Green" data-tooltip="Green" style="background-color: #008000" data-color="008000">&nbsp;</a></li><li><a href="#" aria-label="Teal" data-tooltip="Teal" style="background-color: #008080" data-color="008080">&nbsp;</a></li><li><a href="#" aria-label="Blue" data-tooltip="Blue" style="background-color: #0000FF" data-color="0000FF">&nbsp;</a></li><li><a href="#" aria-label="Greyish blue" data-tooltip="Greyish blue" style="background-color: #666699" data-color="666699">&nbsp;</a></li><li><a href="#" aria-label="Grey" data-tooltip="Grey" style="background-color: #7A869A" data-color="7A869A">&nbsp;</a></li><li><a href="#" aria-label="Red" data-tooltip="Red" style="background-color: #FF0000" data-color="FF0000">&nbsp;</a></li><li><a href="#" aria-label="Amber" data-tooltip="Amber" style="background-color: #FF9900" data-color="FF9900">&nbsp;</a></li><li><a href="#" aria-label="Yellow green" data-tooltip="Yellow green" style="background-color: #99CC00" data-color="99CC00">&nbsp;</a></li><li><a href="#" aria-label="Sea green" data-tooltip="Sea green" style="background-color: #339966" data-color="339966">&nbsp;</a></li><li><a href="#" aria-label="Turquoise" data-tooltip="Turquoise" style="background-color: #33CCCC" data-color="33CCCC">&nbsp;</a></li><li><a href="#" aria-label="Royal blue" data-tooltip="Royal blue" style="background-color: #3366FF" data-color="3366FF">&nbsp;</a></li><li><a href="#" aria-label="Purple" data-tooltip="Purple" style="background-color: #800080" data-color="800080">&nbsp;</a></li><li><a href="#" aria-label="Medium grey" data-tooltip="Medium grey" style="background-color: #A5ADBA" data-color="A5ADBA">&nbsp;</a></li><li><a href="#" aria-label="Magenta" data-tooltip="Magenta" style="background-color: #FF00FF" data-color="FF00FF">&nbsp;</a></li><li><a href="#" aria-label="Gold" data-tooltip="Gold" style="background-color: #FFCC00" data-color="FFCC00">&nbsp;</a></li><li><a href="#" aria-label="Yellow" data-tooltip="Yellow" style="background-color: #FFFF00" data-color="FFFF00">&nbsp;</a></li><li><a href="#" aria-label="Lime" data-tooltip="Lime" style="background-color: #00FF00" data-color="00FF00">&nbsp;</a></li><li><a href="#" aria-label="Aqua" data-tooltip="Aqua" style="background-color: #00FFFF" data-color="00FFFF">&nbsp;</a></li><li><a href="#" aria-label="Sky blue" data-tooltip="Sky blue" style="background-color: #00CCFF" data-color="00CCFF">&nbsp;</a></li><li><a href="#" aria-label="Red violet" data-tooltip="Red violet" style="background-color: #993366" data-color="993366">&nbsp;</a></li><li><a href="#" aria-label="Light grey" data-tooltip="Light grey" style="background-color: #C1C7D0" data-color="C1C7D0">&nbsp;</a></li><li><a href="#" aria-label="Pink" data-tooltip="Pink" style="background-color: #FF99CC" data-color="FF99CC">&nbsp;</a></li><li><a href="#" aria-label="Peach" data-tooltip="Peach" style="background-color: #FFCC99" data-color="FFCC99">&nbsp;</a></li><li><a href="#" aria-label="Light yellow" data-tooltip="Light yellow" style="background-color: #FFFF99" data-color="FFFF99">&nbsp;</a></li><li><a href="#" aria-label="Pale green" data-tooltip="Pale green" style="background-color: #CCFFCC" data-color="CCFFCC">&nbsp;</a></li><li><a href="#" aria-label="Pale cyan" data-tooltip="Pale cyan" style="background-color: #CCFFFF" data-color="CCFFFF">&nbsp;</a></li><li><a href="#" aria-label="Light sky blue" data-tooltip="Light sky blue" style="background-color: #99CCFF" data-color="99CCFF">&nbsp;</a></li><li><a href="#" aria-label="Plum" data-tooltip="Plum" style="background-color: #CC99FF" data-color="CC99FF">&nbsp;</a></li><li><a href="#" aria-label="White" data-tooltip="White" style="background-color: #FFFFFF" data-color="FFFFFF">&nbsp;</a></li></ul></div></div></div>
+                </li>
+                <li id="more-menu" class="toolbar-item toolbar-dropdown">
+                    <div class="aui-dd-parent">
+                        <a id="rte-button-more" href="#" class="toolbar-trigger aui-dd-trigger aui-button" data-tooltip="More">
+                                        
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-styles ">Formatting</span>
+                                            
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-dropdown "></span>
+                        </a>
+                        <div id="rte-button-more-menu" class="aui-dropdown grouped hidden">
+                            <div class="grouped-dropdown-item">
+                                <ul>
+                                                        <li class="dropdown-item more-menu-trigger" data-control-id="strikethrough" data-tooltip="Strikethrough (Ctrl+Shift+S)">
+    <a id="rte-strikethrough" class="item-link" href="#">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+Strikethrough
+    </a>
+</li>
+                                                             <li class="dropdown-item more-menu-trigger" data-control-id="sub" data-tooltip="">
+    <a id="rte-sub" class="item-link" href="#">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+Subscript
+    </a>
+</li>
+                                                             <li class="dropdown-item more-menu-trigger" data-control-id="sup" data-tooltip="">
+    <a id="rte-sup" class="item-link" href="#">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+Superscript
+    </a>
+</li>
+                                                    <li class="dropdown-item more-menu-trigger" data-control-id="monospace" data-tooltip="Format text with monospaced font">
+    <a id="rte-monospace" class="item-link" href="#">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+Monospace
+    </a>
+</li>
+
+                                                                                                                </ul>
+                            </div>
+                            <div class="grouped-dropdown-item">
+                                <ul>
+                                    <li class="dropdown-item more-menu-trigger no-icon" data-format="removeformat" data-tooltip="Clears formatting on currently selected text">
+<a id="rte-removeformat" class="item-link" href="#">
+    Clear formatting
+</a>
+</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+
+            <ul class="aui-buttons rte-toolbar-group-lists">
+                
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-bullist" data-tooltip="Bullet list (Ctrl+Shift+B)">
+    <a class="toolbar-trigger" href="#" data-control-id="bullist">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-list-bullet ">Bullet list</span>
+    </a>
+</li>
+                    
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-numlist" data-tooltip="Numbered list (Ctrl+Shift+N)">
+    <a class="toolbar-trigger" href="#" data-control-id="numlist">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-list-number ">Numbered list</span>
+    </a>
+</li>
+            </ul>
+                            <ul class="aui-buttons rte-toolbar-group-task-lists">
+                    
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-tasklist" data-tooltip="Task list ([ then ])">
+    <a class="toolbar-trigger" href="#" data-control-id="tasklist">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-task ">Task list</span>
+    </a>
+</li>
+                </ul>
+            
+            <ul class="aui-buttons rte-toolbar-group-indentation">
+                
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-outdent" data-tooltip="Outdent">
+    <a class="toolbar-trigger" href="#" data-control-id="outdent">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-indent-left ">Outdent</span>
+    </a>
+</li>
+                    
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-indent" data-tooltip="Indent">
+    <a class="toolbar-trigger" href="#" data-control-id="indent">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-indent-right ">Indent</span>
+    </a>
+</li>
+            </ul>
+
+            <ul class="aui-buttons rte-toolbar-group-justification">
+                
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-justifyleft" data-tooltip="Align left">
+    <a class="toolbar-trigger" href="#" data-control-id="justifyleft">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-align-left ">Align left</span>
+    </a>
+</li>
+                    
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-justifycenter" data-tooltip="Align center">
+    <a class="toolbar-trigger" href="#" data-control-id="justifycenter">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-align-center ">Align center</span>
+    </a>
+</li>
+                    
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-justifyright" data-tooltip="Align right">
+    <a class="toolbar-trigger" href="#" data-control-id="justifyright">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-align-right ">Align right</span>
+    </a>
+</li>
+            </ul>
+
+                            <ul class="aui-buttons hidden" id="page-layout-2-group">
+                    <li id="page-layout-2" class="toolbar-item" data-tooltip="Page layout">
+                        <a href="#" class="aui-button aui-button-subtle toolbar-trigger" id="rte-button-pagelayout-2">
+                                        
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-layout ">Page layout</span>
+                        </a>
+                    </li>
+                </ul>
+            
+
+            <ul class="aui-buttons rte-toolbar-group-files hidden"></ul>
+
+            <ul class="aui-buttons rte-toolbar-group-link no-separator">
+                <li class="toolbar-item" data-tooltip="Insert link (Ctrl+K)">
+                    <a id="rte-button-link" class="toolbar-trigger aui-button aui-button-subtle" href="#" data-control-id="linkbrowserButton">
+                                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-link "></span>
+                        <span class="trigger-text">Link</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="aui-buttons rte-toolbar-group-table no-separator">
+                <li class="toolbar-item toolbar-dropdown" id="insert-table-dropdown">
+                    <div class="aui-dd-parent">
+                        <a href="#" class="toolbar-trigger aui-dd-trigger aui-button aui-button-subtle" id="rte-button-insert-table" data-tooltip="Insert table">
+                                        
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-table "></span>
+                            <span class="dropdown-text">Table</span>
+                                        
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-dropdown "></span>
+                        </a>
+
+                        <div id="table-picker-container" class="hidden aui-box-shadow">
+                            <div class="table-picker-box" data-tooltip="Hold SHIFT for a table without a heading.">
+                                <div class="table-picker-background">
+                                    <div class="picker picker-cell"></div>
+                                    <div class="picker picker-heading heading"></div>
+                                    <div class="picker picker-selected-cell"></div>
+                                    <div class="picker picker-selected-heading heading"></div>
+                                </div>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+                                    
+            
+            <ul class="aui-buttons rte-toolbar-group-insert no-separator">
+                <li class="toolbar-item toolbar-dropdown" id="insert-menu">
+                    <div class="aui-dd-parent">
+                        <a href="#" class="toolbar-trigger aui-dd-trigger aui-button aui-button-subtle" id="rte-button-insert" data-tooltip="Insert more content">
+                                        
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-add "></span>
+                            <span class="dropdown-text">Insert</span>
+                                        
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-dropdown "></span>
+                        </a>
+
+                        <div id="insert-menu-options" class="aui-dropdown grouped hidden">
+                            <div class="grouped-dropdown-item">
+                                <span class="assistive">Insert content</span>
+                                <ul id="content-insert-list">
+                                    
+        
+                <li class="dropdown-item content-image" data-command="mceConfimage" data-tooltip="Insert files and images (Ctrl+M)">
+<a id="rte-insert-image" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-image "></span>
+ Files and images
+</a>
+</li>
+                                            
+        
+                <li class="dropdown-item content-link" data-control-id="linkbrowserButton" data-tooltip="Insert link (Ctrl+K)">
+<a id="rte-insert-link" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-link "></span>
+ Link
+</a>
+</li>
+                                            
+        
+                <li class="dropdown-item content-wikimarkup" data-command="InsertWikiMarkup" data-tooltip="Insert markup (Ctrl+Shift+D)">
+<a id="rte-insert-wikimarkup" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-code "></span>
+ Markup
+</a>
+</li>
+                                            
+    
+                <li class="dropdown-item content-hr" data-command="InsertHorizontalRule" data-tooltip="Insert horizontal rule (----)">
+<a id="rte-insert-hr" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-horizontal-rule "></span>
+ Horizontal rule
+</a>
+</li>
+                                                                                
+        
+                <li class="dropdown-item content-tasklist" data-command="InsertInlineTaskListNoToggle" data-tooltip="Insert task list ([ then ])">
+<a id="rte-insert-tasklist" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-task "></span>
+ Task list
+</a>
+</li>
+                                                                            
+        
+                <li class="dropdown-item content-date" data-command="confMenuInsertDate" data-tooltip="Insert date (/ then /)">
+<a id="rte-insert-date" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-calendar "></span>
+ Date
+</a>
+</li>
+                                            
+    
+                <li class="dropdown-item content-emoticon" data-command="mceEmotion" data-tooltip="Insert emoticon">
+<a id="rte-insert-emoticon" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-emoji "></span>
+ Emoticon
+</a>
+</li>
+                                            
+    
+                <li class="dropdown-item content-symbol" data-command="confCharmap" data-tooltip="Insert symbol">
+<a id="rte-insert-symbol" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-symbol "></span>
+ Symbol
+</a>
+</li>
+                                    </ul>
+                                <span class="assistive">Insert macro</span>
+                                <ul id="macro-insert-list">
+                                                                        
+                                                                        
+                                                <li class="dropdown-item macro-insertmention-button" data-macro-name="insertmention-button" data-tooltip="Insert 'User mention' macro">
+<a id="insertmention-button" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-mention "></span>
+ User mention
+</a>
+</li>
+                                                                        
+                                                                        
+            <li class="dropdown-item macro-jiralink" data-macro-name="jiralink" data-tooltip="Insert 'Jira Issue/Filter' macro">
+<a id="jiralink" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-jira "></span>
+ Jira Issue/Filter
+</a>
+</li>
+                                                                        
+                                                                        
+            <li class="dropdown-item macro-info" data-macro-name="info" data-tooltip="Insert 'Info' macro">
+<a id="info" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-info-filled "></span>
+ Info
+</a>
+</li>
+                                                                        
+                                                                        
+            <li class="dropdown-item macro-status" data-macro-name="status" data-tooltip="Insert 'Status' macro">
+<a id="status" class="item-link" href="#">
+                        
+    
+    <span class="icon confluence-icon-status-macro"></span>
+ Status
+</a>
+</li>
+                                                                        
+                                                                        
+            <li class="dropdown-item macro-gallery" data-macro-name="gallery" data-tooltip="Insert 'Gallery' macro">
+<a id="gallery" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-gallery "></span>
+ Gallery
+</a>
+</li>
+                                                                        
+                                                                        
+            <li class="dropdown-item macro-toc" data-macro-name="toc" data-tooltip="Insert 'Table of Contents' macro">
+<a id="toc" class="item-link" href="#">
+                
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-overview "></span>
+ Table of Contents
+</a>
+</li>
+                                                                    </ul>
+                            </div>
+                            <div class="grouped-dropdown-item">
+                                <ul id="more-macros-list">
+                                    
+        
+                <li class="dropdown-item content-macro" data-command="mceConfMacroBrowser" data-tooltip="Open the macro browser (Ctrl+Shift+A)">
+<a id="rte-insert-macro" class="item-link" href="#">
+    Other macros
+</a>
+</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+                            <ul class="aui-buttons rte-toolbar-group-page-layouts-section-types">
+                    <li id="pagelayout-menu" class="toolbar-item toolbar-dropdown">
+                        <div class="aui-dd-parent">
+                            <a href="#" class="toolbar-trigger aui-dd-trigger aui-button aui-button-subtle" id="rte-button-pagelayout" data-tooltip="Page layout">
+                                            
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-default">Page layout</span>
+                                            
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-dropdown "></span>
+                            </a>
+
+                            <ul id="pagelayout-menu-options" class="aui-dropdown hidden">
+                                <li class="dropdown-item" data-tooltip="No layout">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-none&quot;, &quot;columns&quot;: 0   }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-none">No layout</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (simple)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-simple&quot;, &quot;columns&quot;: [&quot;&quot;, &quot;&quot;]   }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-two-simple">Two column (simple)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (simple, left sidebar)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-simple-left&quot;, &quot;columns&quot;: [&quot;aside&quot;, &quot;large&quot;]   }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-two-simple-left">Two column (simple, left sidebar)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (simple, right sidebar)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-simple-right&quot;, &quot;columns&quot;: [&quot;large&quot;, &quot;aside&quot;]   }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-two-simple-right">Two column (simple, right sidebar)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Three column (simple)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-three-simple&quot;, &quot;columns&quot;: [&quot;&quot;, &quot;&quot;, &quot;&quot;]   }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-three-simple">Three column (simple)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two&quot;, &quot;columns&quot;: [&quot;&quot;, &quot;&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-two">Two column</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (left sidebar)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-left&quot;, &quot;columns&quot;: [&quot;aside&quot;, &quot;large&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-two-left">Two column (left sidebar)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (right sidebar)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-right&quot;, &quot;columns&quot;: [&quot;large&quot;, &quot;aside&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-two-right">Two column (right sidebar)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Three column">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-three&quot;, &quot;columns&quot;: [&quot;&quot;, &quot;&quot;, &quot;&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-three">Three column</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Three column (left and right sidebars)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-three-sidebars&quot;, &quot;columns&quot;: [&quot;sidebars&quot;, &quot;large&quot;, &quot;sidebars&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-check hidden"></span>
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-layout pagelayout-three-sidebars">Three column (left and right sidebars)</span>
+    </a>
+</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            
+                        
+            <ul class="aui-buttons aui-button-subtle rte-toolbar-group-undo">
+                
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-undo" data-tooltip="Undo (Ctrl+Z)">
+    <a class="toolbar-trigger" href="#" data-control-id="undo">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-undo ">Undo</span>
+    </a>
+</li>
+                    
+            <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-redo" data-tooltip="Redo (Ctrl+Y)">
+    <a class="toolbar-trigger" href="#" data-control-id="redo">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-redo ">Redo</span>
+    </a>
+</li>
+            </ul>
+        </div>                                                    <div id="draft-status" style="display:none"></div>
+                <div class="aui-toolbar2-secondary">
+            <ul class="aui-buttons aui-button-subtle rte-toolbar-group-searchreplace">
+                <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-searchreplace" data-tooltip="Find/Replace">
+    <a class="toolbar-trigger" href="#" data-control-id="searchreplace">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-search ">Find/Replace</span>
+    </a>
+</li>
+            </ul>
+            <ul class="aui-buttons aui-button-subtle rte-toolbar-group-help">
+                <li class="toolbar-item aui-button aui-button-subtle" id="rte-button-help" data-tooltip="Help">
+    <a class="toolbar-trigger" href="#" data-control-id="help">
+                    
+    
+    <span class="icon aui-icon aui-icon-small aui-iconfont-editor-help ">Keyboard shortcuts help</span>
+    </a>
+</li>
+            </ul>
+        </div>    </div></div>
+
+
+                    <div id="editor-notifications-container"><div id="editor-messages"><div id="anonymous-warning" class="aui-message aui-message-warning closeable">You are not logged in. Any changes you make will be marked as <span class="smalltext">anonymous</span>. You may want to <a href="https://www.digikey.com/eewiki/login.action?os_destination=%2Fpages%2Fviewpage.action">Log In</a> if you already have an account.</div><div id="heartbeat-div" class="hidden"><div class="aui-message info closeable"><span class="aui-icon icon-info"></span>This page is also being edited by <span id="other-users-span"></span>. Your changes will be merged with theirs when you save.</div></div></div><div id="all-messages"><div id="action-messages"></div></div></div><div id="editor-precursor"><div class="cell"><div class="aui-buttons aui-toolbar2"><button class="aui-button aui-button-subtle rte-button-labels" type="button" data-tooltip="Labels" id="rte-button-labels" data-explicit-restrictions="" data-inherited-restrictions=""><span class="icon aui-icon aui-icon-small aui-iconfont-devtools-tag"></span></button></div><div id="content-title-div" class="collaborative"><input type="text" name="title" id="content-title" tabindex="1" class="text pagetitle" autocomplete="off" value="VGA Controller (VHDL)" placeholder="Page title"></div></div></div>
+    
+<div id="wysiwyg">
+    <div id="rte" class="cell editor-default collaborative">
+        <textarea id="wysiwygTextarea" name="wysiwygContent" class="hidden tinymce-editor"></textarea>
+    </div>
+</div>
+<div id="editor-html-source-container" class="hidden">
+    <textarea id="editor-html-source" class="monospaceInput"></textarea>
+</div>
+
+<div id="preview">
+    <div id="previewArea" class="cell">
+    </div>
+</div>
+
+    <div id="savebar-container"><div id="rte-savebar" class="aui-toolbar aui-toolbar2"><div class="toolbar-split toolbar-split-row"><div class="toolbar-split toolbar-split-left"><div class="aui-buttons"></div></div><div class="toolbar-split toolbar-split-right"><div id="pluggable-status-container" class="toolbar-item rte-toolbar-pluggable-status"><div id="pluggable-status" class="synchrony"><div class="synchrony-status-indicator"><div class="status-indicator-icon aui-icon aui-icon-small aui-iconfont-devtools-task-in-progress" data-tooltip="We're automatically saving all of your changes in a draft."></div><div class="status-indicator-message" data-tooltip="We're automatically saving all of your changes in a draft.">Connecting...</div></div></div></div><div class="aui-buttons" id="rte-savebar-tinymce-plugin-point"></div><div class="aui-buttons"><span id="rte-spinner" class="toolbar-item shared-drafts">&nbsp;</span></div><div class="aui-buttons toolbar-group-edit assistive"><button id="rte-button-edit" class="aui-button" title="Return To edit Mode" type="button"><span class="trigger-text">Edit</span></button></div><div class="aui-buttons toolbar-group-preview toolbar-group-preview-page toolbar-group-preview-shared-draft"></div><div class="save-button-container"><button class="aui-button aui-button-primary" type="submit" id="rte-button-publish" name="confirm" value="Save" title="Save"><span class="trigger-text">Save</span></button></div><div class="aui-buttons cancel-button-container-shared-draft"><button class="aui-button" type="submit" id="rte-button-cancel" name="cancel" value="cancel">Close</button></div><div class="aui-buttons toolbar-group-preview toolbar-group-ellipsis"><button class="aui-button toolbar-item aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" aria-haspopup="true" id="rte-button-ellipsis" type="button" resolved="" aria-controls="rte-ellipsis-menu" aria-expanded="false"><span class="aui-icon aui-icon-small aui-iconfont-more"></span></button></div><div id="rte-ellipsis-menu" data-aui-alignment="top auto" class="aui-style-default aui-dropdown2 aui-layer" resolved="" aria-hidden="true"><div class="aui-dropdown2-section"><ul class="aui-list-truncate"><li><a href="#" id="rte-button-preview">Preview</a></li><li><a href="#" id="rte-show-changes">View changes</a></li></ul></div><div class="aui-dropdown2-section"><ul class="aui-list-truncate"><li><a href="#" id="rte-show-revert">Revert to last published version</a></li></ul></div></div></div></div></div></div>
+
+    <section role="dialog" id="quit-editor-dialog" class="aui-layer aui-dialog2 aui-dialog2-medium" aria-hidden="true"><header class="aui-dialog2-header"></header><div class="aui-dialog2-content"></div><footer class="aui-dialog2-footer"><div class="aui-dialog2-footer-actions"><button id="qed-publish-button" class="aui-button aui-button-primary update">Update</button><button id="qed-discard-button" title="Discard all unpublished changes" class="aui-button toolbar-item exit">Revert page</button><button id="qed-save-exit-button" class="aui-button aui-button-primary exit">Keep draft</button><button id="qed-close-button" class="aui-button toolbar-item">Close</button></div></footer></section>
+
+    
+</div>
+
+
+
+<script type="text/x-template" title="dynamic-editor-metadata" id="dynamic-editor-metadata-template">
+            <meta name="ajs-use-watch" content="false">
+            <meta name="ajs-attachment-source-content-id" content="15925278">
+            <meta name="ajs-use-inline-tasks" content="true">
+            <meta name="ajs-heartbeat" content="true">
+            <meta name="ajs-action-locale" content="en_US">
+            <meta name="ajs-editor-plugin-resource-prefix" content="/eewiki/s/en_US/7901/0059a6c4a9a3d763ef46aeebecc5e24fefd039f0/6.13.7/_">
+            <meta name="ajs-edit-mode" content="collaborative">
+            <meta name="ajs-user-watching-own-content" content="false">
+            <meta name="ajs-new-page" content="false">
+            <meta name="ajs-editor-mode" content="richtext">
+            <meta name="ajs-auto-start" content="false">
+            <meta name="ajs-conf-revision" content="confluence$content$15925278.36">
+            <meta name="ajs-sync-revision-source" content="">
+            <meta name="ajs-draft-id" content="78086294">
+            <meta name="ajs-draft-share-id" content="03fee7ec-3e44-46c8-993d-397407aeae63">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-collaborative-editor-status" content="">
+            <meta name="ajs-existing-draft-id" content="0">
+            <meta name="ajs-content-id" content="15925278">
+            <meta name="ajs-form-name" content="inlinecommentform">
+            <meta name="ajs-can-attach-files" content="false">
+            <meta name="ajs-show-draft-message" content="false">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-collaborative-content" content="true">
+            <meta name="ajs-min-editor-height" content="150">
+            <meta name="ajs-version-comment" content="">
+            <meta name="ajs-draft-type" content="page">
+                
+                <meta name="ajs-synchrony-token" content="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJodHRwczpcL1wvd3d3LmRpZ2lrZXkuY29tXC9zeW5jaHJvbnlcL3YxIiwiYWNjZXNzIjp7IlwvZGF0YVwvRGlnaS1LZXktQ29ycG9yYXRpb24tNjg1NmExZDQtNWY3OS0zN2U4LTllMTktYjExYjI1NTMzZDMxXC9jb25mbHVlbmNlLTE1OTI1Mjc4LXRpdGxlIjoiIiwiXC9kYXRhXC9EaWdpLUtleS1Db3Jwb3JhdGlvbi02ODU2YTFkNC01Zjc5LTM3ZTgtOWUxOS1iMTFiMjU1MzNkMzFcL2NvbmZsdWVuY2UtMTU5MjUyNzgiOiIifSwicmV2aXNpb25NZXRhIjp7fSwic2Vzc2lvbiI6eyJhdmF0YXJVUkwiOiJcL2ltYWdlc1wvaWNvbnNcL3Byb2ZpbGVwaWNzXC9hbm9ueW1vdXMuc3ZnIiwibmFtZSI6bnVsbCwiZnVsbG5hbWUiOm51bGx9LCJpc3MiOiJEaWdpLUtleS1Db3Jwb3JhdGlvbi02ODU2YTFkNC01Zjc5LTM3ZTgtOWUxOS1iMTFiMjU1MzNkMzEiLCJleHAiOjE2MDQ4OTU4MDMsImlhdCI6MTYwNDgwOTQwM30.n7ua0NwjbAd2URL8JrdAki3xwNH0Pnmjz8-OM8lQjjs">
+    <meta name="ajs-synchrony-base-url" content="https://www.digikey.com/synchrony,https://www.digikey.com/eewiki/synchrony-proxy">
+    <meta name="ajs-synchrony-app-id" content="Digi-Key-Corporation-6856a1d4-5f79-37e8-9e19-b11b25533d31">
+    <meta name="ajs-synchrony-expiry" content="1604894903">
+    <meta name="ajs-use-xhr-fallback" content="true">
+
+            		    <meta name="ajs-max-thumb-width" content="300">
+		    <meta name="ajs-max-thumb-height" content="300">
+		    <meta name="ajs-can-send-email" content="true">
+		    <meta name="ajs-is-dev-mode" content="false">
+		    <meta name="ajs-draft-save-interval" content="30000">
+		    <meta name="ajs-show-hidden-user-macros" content="false">
+		    <meta name="ajs-can-view-profile" content="false">
+		    <meta name="ajs-is-admin" content="false">
+		    <meta name="ajs-heartbeat-interval" content="30000">
+	
+    </script>
+
+<script type="text/x-template" title="tableForm" id="table-form-template">
+    <form id="tinymce-table-form" class="aui">
+        <div class="field-group">
+            <label for="rows">Rows</label>
+            <input id="rows" name="rows" type="text" size="3" autocomplete="off" value="{0}">
+        </div>
+        <div class="field-group">
+            <label for="cols">Columns</label>
+            <input id="cols" name="cols" type="text" size="3" autocomplete="off" value="{1}">
+        </div>
+        <div class="field-group hidden">
+            <input id="width" type="hidden" name="width" value="">
+            <label for="width">Width</label>
+        </div>
+        <div class="group">
+            <div class="checkbox">
+                <input id="table-heading-checkbox" class="checkbox" type="checkbox" name="heading" checked="checked" value="true">
+                <label for="table-heading-checkbox">First row is heading</label>
+            </div>
+        </div>
+        <div class="group hidden">
+            <div class="checkbox">
+                <input id="table-equal-width-columns-checkbox" class="checkbox" type="checkbox" name="equal-width-columns" value="false">
+                <label for="table-equal-width-columns-checkbox">Equal width columns</label>
+            </div>
+        </div>
+    </form>
+</script>
+<input type="hidden" name="draftId" value="78086294" id="draftId"><input type="hidden" name="originalVersion" value="37" id="originalVersion">
+<input type="hidden" name="syncRev" value="dummy-sync-rev" id="syncRev">    <input type="hidden" name="atl_token" value="6c09395a9c29648c2bf20a8cd4227135af55f039">
+</div><div id="ZN_doHhT6xbShXrzDf"></div><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon614099202660"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon773447784792" alt="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/0.omcsettings" width="0" height="0"></div><script src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/CoreModule.js" defer="defer"></script><div style="display: none;"></div><iframe id="clicktaleCrossDomain" class="hidden" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/crossdomain.html" async="true" style="display:none" aria-hidden="true" tabindex="-1" title="empty" width="0" height="0" frameborder="0"></iframe><script type="text/javascript" crossorigin="anonymous" async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/3d60bbfe-3fa3-45c4-9332-cc1534d3e4bd.js"></script><div id="ClickTaleDiv" style="display: none;"></div><script crossorigin="anonymous" type="text/javascript" async="" src="VGA%20Controller%20(VHDL)%20-%20Logic%20-%20eewiki_files/latest-WR110.js"></script></body></html>
